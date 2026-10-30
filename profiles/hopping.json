@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "game": "hopping",
+  "calibrated": false,
+  "vision_backend": "arcade_fast",
+  "advisory_only": true,
+  "score_anchor": "../assets/arcade/score-anchor.png",
+  "egg_template": "../assets/arcade/egg-pickup.png",
+  "golden_template": "../assets/arcade/golden-enemy.png",
+  "viewport": [0.1666666667, 0.0509259259, 0.6666666666, 0.8888888889],
+  "reference_size": [640, 480],
+  "stable_frames": 3,
+  "required": ["player", "ball"],
+  "detectors": [],
+  "readouts": [],
+  "policy": {"algorithm": "reactive", "calibrated": false, "allow_jump": true, "jump_window_seconds": 0.1, "latency_seconds": 0.05},
+  "notes": "参考实况640x480颜色/形状配置，仅观察建议；0.05秒延迟与0.1秒跳跃窗口是待测启发式，非实机参数。"
+}

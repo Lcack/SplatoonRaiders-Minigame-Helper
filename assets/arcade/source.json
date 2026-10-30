@@ -1,0 +1,21 @@
+{
+  "source_url": "https://www.youtube.com/watch?v=l3dMQV1sar8",
+  "seconds": 350,
+  "full_frame_viewport": [
+    320,
+    55,
+    1280,
+    960
+  ],
+  "canonical_size": [
+    640,
+    480
+  ],
+  "anchor_box": [
+    385,
+    2,
+    121,
+    23
+  ],
+  "scope": "reference_video_only_not_hardware_calibration"
+}

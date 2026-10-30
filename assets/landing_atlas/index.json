@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "scope": "one_reference_run_not_complete_map_catalog",
+  "canonical_size": [
+    640,
+    480
+  ],
+  "source_url": "https://www.youtube.com/watch?v=l3dMQV1sar8",
+  "source_sha256": "58bbc11ae82d4bae106439a1374f6d0248b4f2de889167626bf7ea49a7cff071",
+  "pose_reference": "robot_upright.png",
+  "layouts": [
+    {
+      "id": "utagaming-run1-layout-01",
+      "observed_stage": 1,
+      "source_image": "artifacts/landing_map_candidates/frame-00058380.png",
+      "source_seconds": 973,
+      "mask": "utagaming-run1-layout-01-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-02",
+      "observed_stage": 2,
+      "source_image": "artifacts/landing_map_candidates/frame-00058980.png",
+      "source_seconds": 983,
+      "mask": "utagaming-run1-layout-02-mask.png",
+      "start_hint": [
+        0.055,
+        0.46125
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.21518987341772153,
+          0.4576271186440678
+        ],
+        [
+          0.2911392405063291,
+          0.5423728813559322
+        ],
+        [
+          0.4050632911392405,
+          0.5423728813559322
+        ],
+        [
+          0.4810126582278481,
+          0.4576271186440678
+        ],
+        [
+          0.5949367088607594,
+          0.4576271186440678
+        ],
+        [
+          0.6708860759493671,
+          0.5423728813559322
+        ],
+        [
+          0.7848101265822784,
+          0.5423728813559322
+        ],
+        [
+          0.8607594936708861,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-03",
+      "observed_stage": 3,
+      "source_image": "artifacts/landing_map_candidates/frame-00060180.png",
+      "source_seconds": 1003,
+      "mask": "utagaming-run1-layout-03-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.17721518987341772,
+          0.4576271186440678
+        ],
+        [
+          0.379746835443038,
+          0.711864406779661
+        ],
+        [
+          0.7468354430379747,
+          0.711864406779661
+        ],
+        [
+          0.8734177215189873,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-04",
+      "observed_stage": 4,
+      "source_image": "artifacts/landing_map_candidates/frame-00061380.png",
+      "source_seconds": 1023,
+      "mask": "utagaming-run1-layout-04-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-05",
+      "observed_stage": 5,
+      "source_image": "artifacts/landing_map_candidates/frame-00062580.png",
+      "source_seconds": 1043,
+      "mask": "utagaming-run1-layout-05-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.21518987341772153,
+          0.4576271186440678
+        ],
+        [
+          0.3291139240506329,
+          0.5932203389830508
+        ],
+        [
+          0.6835443037974683,
+          0.5932203389830508
+        ],
+        [
+          0.7468354430379747,
+          0.5423728813559322
+        ],
+        [
+          0.8607594936708861,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-06",
+      "observed_stage": 6,
+      "source_image": "artifacts/landing_map_candidates/frame-00064380.png",
+      "source_seconds": 1073,
+      "mask": "utagaming-run1-layout-06-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.7974683544303798,
+          0.423728813559322
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-07",
+      "observed_stage": 7,
+      "source_image": "artifacts/landing_map_candidates/frame-00065580.png",
+      "source_seconds": 1093,
+      "mask": "utagaming-run1-layout-07-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.08860759493670886,
+          0.2542372881355932
+        ],
+        [
+          0.3291139240506329,
+          0.23728813559322035
+        ],
+        [
+          0.5063291139240507,
+          0.23728813559322035
+        ],
+        [
+          0.5316455696202531,
+          0.288135593220339
+        ],
+        [
+          0.5189873417721519,
+          0.4745762711864407
+        ],
+        [
+          0.4936708860759494,
+          0.5254237288135594
+        ],
+        [
+          0.4936708860759494,
+          0.6271186440677966
+        ],
+        [
+          0.7848101265822784,
+          0.6271186440677966
+        ],
+        [
+          0.8481012658227848,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-08",
+      "observed_stage": 8,
+      "source_image": "artifacts/landing_map_candidates/frame-00067380.png",
+      "source_seconds": 1123,
+      "mask": "utagaming-run1-layout-08-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.08860759493670886,
+          0.3389830508474576
+        ],
+        [
+          0.27848101265822783,
+          0.3389830508474576
+        ],
+        [
+          0.34177215189873417,
+          0.6779661016949152
+        ],
+        [
+          0.620253164556962,
+          0.6779661016949152
+        ],
+        [
+          0.810126582278481,
+          0.1694915254237288
+        ],
+        [
+          0.9113924050632911,
+          0.1694915254237288
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-09",
+      "observed_stage": 9,
+      "source_image": "artifacts/landing_map_candidates/frame-00069180.png",
+      "source_seconds": 1153,
+      "mask": "utagaming-run1-layout-09-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45916666666666667
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.2911392405063291,
+          0.4745762711864407
+        ],
+        [
+          0.3291139240506329,
+          0.5084745762711864
+        ],
+        [
+          0.620253164556962,
+          0.6271186440677966
+        ],
+        [
+          0.7848101265822784,
+          0.6271186440677966
+        ],
+        [
+          0.8481012658227848,
+          0.4576271186440678
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    },
+    {
+      "id": "utagaming-run1-layout-10",
+      "observed_stage": 10,
+      "source_image": "artifacts/landing_map_candidates/frame-00071580.png",
+      "source_seconds": 1193,
+      "mask": "utagaming-run1-layout-10-mask.png",
+      "start_hint": [
+        0.055,
+        0.45916666666666667
+      ],
+      "goal_hint": [
+        0.94,
+        0.45
+      ],
+      "waypoints": [
+        [
+          0.05063291139240506,
+          0.4576271186440678
+        ],
+        [
+          0.08860759493670886,
+          0.3389830508474576
+        ],
+        [
+          0.17721518987341772,
+          0.3389830508474576
+        ],
+        [
+          0.25316455696202533,
+          0.6440677966101694
+        ],
+        [
+          0.35443037974683544,
+          0.7627118644067796
+        ],
+        [
+          0.4430379746835443,
+          0.7627118644067796
+        ],
+        [
+          0.7088607594936709,
+          0.7457627118644068
+        ],
+        [
+          0.9113924050632911,
+          0.6271186440677966
+        ],
+        [
+          0.9240506329113924,
+          0.5084745762711864
+        ],
+        [
+          0.9367088607594937,
+          0.4576271186440678
+        ]
+      ],
+      "strategy_status": "experimental_geometry_only"
+    }
+  ]
+}

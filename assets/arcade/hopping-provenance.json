@@ -1,0 +1,97 @@
+{
+  "source_url": "https://www.youtube.com/watch?v=l3dMQV1sar8",
+  "source_file": "artifacts/reference_videos/utagaming-l3dMQV1sar8/reference.mp4",
+  "source_sha256": "58bbc11ae82d4bae106439a1374f6d0248b4f2de889167626bf7ea49a7cff071",
+  "fps": 60,
+  "canonical_crop_xywh": [
+    320,
+    55,
+    1280,
+    960
+  ],
+  "canonical_size": [
+    640,
+    480
+  ],
+  "evidence": "382.00s 金色锅盖鱼仍可见；383.25s 踩中后下方出现圆形卵；383.50s 卵与普通鱼完全分离地落在半空；383.75s 卵消失且机器人、乌贼变为强化外观。卵与强化外观已分成独立模板。",
+  "records": [
+    {
+      "kind": "egg_pickup",
+      "seconds": 383.5,
+      "frame_index": 23010,
+      "bbox_xywh": [
+        283,
+        249,
+        46,
+        41
+      ],
+      "bbox_normalized_xywh": [
+        0.4421875,
+        0.51875,
+        0.071875,
+        0.08541666666666667
+      ],
+      "canonical_frame": "canonical-383.50.png",
+      "template": "egg_pickup-383.50.png",
+      "sha256": "fb4643976950082e7ccd8f57b1f61364a8e0c271615f12b01575589f01e4998f",
+      "foreground_hue_minmax": [
+        0,
+        179
+      ]
+    },
+    {
+      "kind": "golden_enemy",
+      "seconds": 382.0,
+      "frame_index": 22920,
+      "bbox_xywh": [
+        363,
+        91,
+        77,
+        62
+      ],
+      "bbox_normalized_xywh": [
+        0.5671875,
+        0.18958333333333333,
+        0.1203125,
+        0.12916666666666668
+      ],
+      "canonical_frame": "canonical-382.00.png",
+      "template": "golden_enemy-382.00.png",
+      "sha256": "0c037afbe95c988338dbb7903a2b6d697d1e8d412ae4f39e8c997ef8d90b7d98",
+      "foreground_hue_minmax": [
+        0,
+        179
+      ]
+    },
+    {
+      "kind": "egg_buff_robot",
+      "seconds": 383.75,
+      "frame_index": 23025,
+      "bbox_xywh": [
+        240,
+        377,
+        99,
+        76
+      ],
+      "bbox_normalized_xywh": [
+        0.375,
+        0.7854166666666667,
+        0.1546875,
+        0.15833333333333333
+      ],
+      "canonical_frame": "canonical-383.75.png",
+      "template": "egg_buff_robot-383.75.png",
+      "sha256": "67b87b2b2845a7453f01981fe4e456c6add37cce30eda51be5f47d03e6e75cdf",
+      "foreground_hue_minmax": [
+        0,
+        179
+      ]
+    }
+  ],
+  "limits": "仅单局片段的视觉证据。模板不代表所有动画、旋转和压缩条件；不能仅以红色blob判定卵。",
+  "bundled_assets": {
+    "egg-pickup.png": "egg_pickup-383.50.png",
+    "golden-enemy.png": "golden_enemy-382.00.png"
+  },
+  "buff_note": "强化外观记录仅作画面证据；快速识别器当前用颜色/形状判断，未捆绑强化机器人模板。"
+}

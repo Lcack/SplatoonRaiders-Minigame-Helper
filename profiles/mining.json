@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "game": "mining",
+  "calibrated": false,
+  "viewport": [0, 0, 1, 1],
+  "reference_size": [640, 480],
+  "stable_frames": 3,
+  "required": ["player", "corridor"],
+  "detectors": [],
+  "readouts": [],
+  "policy": {},
+  "notes": "未校准占位配置。需实测游戏区、道路、角色、石头、白色星星、强化状态及左上倒计时。"
+}

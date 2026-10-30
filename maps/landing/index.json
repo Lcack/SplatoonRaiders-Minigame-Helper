@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "game": "landing",
+  "coverage": "one_reference_run_not_complete_map_catalog",
+  "source_url": "https://www.youtube.com/watch?v=l3dMQV1sar8",
+  "source_file": "artifacts/reference_videos/utagaming-l3dMQV1sar8/reference.mp4",
+  "source_sha256": "58bbc11ae82d4bae106439a1374f6d0248b4f2de889167626bf7ea49a7cff071",
+  "notes": "本地ID仅标识这次录播观察到的布局；关卡序号不等于跨对局固定地图ID。图片路径相对于仓库根目录。没有声称已覆盖全部地图或实现逐图控制。",
+  "layouts": [
+    {"id":"utagaming-run1-layout-01","observed_stage":1,"seconds":973,"frame":58380,"image":"artifacts/landing_map_candidates/frame-00058380.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-02","observed_stage":2,"seconds":983,"frame":58980,"image":"artifacts/landing_map_candidates/frame-00058980.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-03","observed_stage":3,"seconds":1003,"frame":60180,"image":"artifacts/landing_map_candidates/frame-00060180.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-04","observed_stage":4,"seconds":1023,"frame":61380,"image":"artifacts/landing_map_candidates/frame-00061380.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-05","observed_stage":5,"seconds":1043,"frame":62580,"image":"artifacts/landing_map_candidates/frame-00062580.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-06","observed_stage":6,"seconds":1073,"frame":64380,"image":"artifacts/landing_map_candidates/frame-00064380.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-07","observed_stage":7,"seconds":1093,"frame":65580,"image":"artifacts/landing_map_candidates/frame-00065580.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-08","observed_stage":8,"seconds":1123,"frame":67380,"image":"artifacts/landing_map_candidates/frame-00067380.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-09","observed_stage":9,"seconds":1153,"frame":69180,"image":"artifacts/landing_map_candidates/frame-00069180.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"},
+    {"id":"utagaming-run1-layout-10","observed_stage":10,"seconds":1193,"frame":71580,"image":"artifacts/landing_map_candidates/frame-00071580.png","terrain_mask":null,"waypoints":[],"strategy_status":"not_calibrated"}
+  ]
+}

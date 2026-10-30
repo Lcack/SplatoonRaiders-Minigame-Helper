@@ -1,0 +1,37 @@
+{
+  "game": "mining",
+  "version": 1,
+  "updated": "2026-10-30",
+  "description": "规则证据记录；当前不由运行器自动加载为实机参数。",
+  "sources": {
+    "gamepedia": "https://gamepedia.jp/splatoon-raiders/archives/3430",
+    "gamewith": "https://gamewith.jp/splatoon-raiders/567154",
+    "pocket_tactics": "https://www.pockettactics.com/splatoon-raiders/arcade-games",
+    "reference_video": "https://www.youtube.com/watch?v=l3dMQV1sar8",
+    "japanese_wiki": "https://wikiwiki.jp/splatoon_r/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%9E%E3%82%B7%E3%83%B3",
+    "user": "本次会话中的用户实机说明"
+  },
+  "adopted": {
+    "initial_time_seconds": {"value": 40, "sources": ["user", "pocket_tactics"]},
+    "scoring_basis": {"value": "forward_distance", "sources": ["japanese_wiki", "user"], "note": "未提供距离到SCORE的精确比例"},
+    "layout_varies_between_runs": {"value": true, "sources": ["japanese_wiki"], "note": "生成分布未知，不据此声称分数无上限"},
+    "end_when_time_expires": {"value": true, "sources": ["user"]},
+    "time_pickup_seconds": {"value": 1, "sources": ["user", "gamepedia", "gamewith"]},
+    "egg_pickup_seconds": {"value": 2, "sources": ["gamepedia", "reference_video"], "evidence": "00:39.75–00:40.25 的 +2.0 提示；见 artifacts/reference_videos/utagaming-l3dMQV1sar8/mining-egg-evidence.json"},
+    "powered_rock_break_seconds": {"value": 1, "sources": ["gamepedia", "gamewith"]},
+    "normal_wall_collision_stops": {"value": true, "sources": ["user", "gamewith", "pocket_tactics"]},
+    "normal_rock_collision_stops": {"value": true, "sources": ["user", "gamewith", "pocket_tactics"]},
+    "powered_rock_collision_stops": {"value": false, "sources": ["user", "gamepedia", "gamewith"]},
+    "powered_wall_collision_stops": {"value": true, "sources": ["user"]},
+    "a_rank_reference_score": {"value": 6000, "sources": ["gamepedia", "gamewith", "pocket_tactics"]},
+    "move_inputs": {"value": ["LEFT_STICK_X", "DPAD_LEFT", "DPAD_RIGHT"], "sources": ["gamepedia"]},
+    "accelerate_inputs": {"value": ["ZR", "A"], "sources": ["gamepedia"]}
+  },
+  "pending": {
+    "buff_duration_seconds": {"reported_value": 10, "approximate": true, "sources": ["gamewith"], "status": "reference_only_not_exact"},
+    "normal_rock_breaks": {"user_reported_value": true, "sources": ["user", "gamepedia"], "status": "potential_conflict_needs_video"},
+    "collision_pause_seconds": {"value": null, "status": "unknown"},
+    "score_depth_formula": {"value": null, "status": "unknown"},
+    "motion_parameters": {"value": null, "status": "unknown"}
+  }
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splatoon-raiders-minigame-helper"
+version = "0.1.0"
+description = "Capture, perception and controller scaffold for four Raiders minigames"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = {text = "GPL-3.0-or-later"}
+dependencies = ["numpy>=1.26,<3", "opencv-python-headless>=4.8,<5", "pillow>=10,<13"]
+
+[project.optional-dependencies]
+controller = ["pyserial>=3.5,<4"]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+raiders-helper = "raiders_helper.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
