@@ -1,0 +1,181 @@
+{
+  "updated": "2026-11-03",
+  "game": "JUGGLING",
+  "platform": "actual Nintendo Switch capture",
+  "verification": "Ranks and scores checked against each saved original result image",
+  "batches": [
+    {
+      "name": "S-batch-03",
+      "local_source_directory": "artifacts/juggling-live/S-batch-03",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "verified_score": 9675,
+          "verified_rank": "A",
+          "automated_score": null,
+          "automated_rank": "A",
+          "loaded_version": "e29cc490b79669b352586474b721d91e6967a88948ac9084cdf57335aa091af4",
+          "frames": 3764,
+          "seconds": 179.69654909987003,
+          "stale_frames": 0,
+          "result_image": "S-batch-03-round-01.png",
+          "result_sha256": "537626d7307b0dc048d58bc4ad1c044164fcabceaceda0d2a992abfca5e80f64"
+        },
+        {
+          "round": 2,
+          "verified_score": 9210,
+          "verified_rank": "A",
+          "automated_score": 9210,
+          "automated_rank": "A",
+          "loaded_version": "e29cc490b79669b352586474b721d91e6967a88948ac9084cdf57335aa091af4",
+          "frames": 3554,
+          "seconds": 180.13618840044364,
+          "stale_frames": 0,
+          "result_image": "S-batch-03-round-02.png",
+          "result_sha256": "87ea439d8db46e617968adf56beca070926458b72cfe1526cc55952c37f55ea2"
+        },
+        {
+          "round": 3,
+          "verified_score": 9900,
+          "verified_rank": "A",
+          "automated_score": 9900,
+          "automated_rank": "A",
+          "loaded_version": "e29cc490b79669b352586474b721d91e6967a88948ac9084cdf57335aa091af4",
+          "frames": 4080,
+          "seconds": 184.15545460022986,
+          "stale_frames": 0,
+          "result_image": "S-batch-03-round-03.png",
+          "result_sha256": "5d2f54278d2093c071cf0a06cb9bc77e225dd6980f00eb65689d0f3e6c1a60fc"
+        }
+      ]
+    },
+    {
+      "name": "S-batch-04",
+      "local_source_directory": "artifacts/juggling-live/S-batch-04",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "verified_score": 7655,
+          "verified_rank": "A",
+          "automated_score": null,
+          "automated_rank": "A",
+          "loaded_version": "ac1d504eb9f2b274632fbbeba9ac034151e5f3543f0be732eb51145764e733a4",
+          "frames": 3426,
+          "seconds": 157.94020579988137,
+          "stale_frames": 0,
+          "result_image": "S-batch-04-round-01.png",
+          "result_sha256": "a278feac7c4040569e4c85e0cd0ddb929a99a032ec2b76bf66bedf026578fcd5"
+        },
+        {
+          "round": 2,
+          "verified_score": 10380,
+          "verified_rank": "A",
+          "automated_score": null,
+          "automated_rank": "A",
+          "loaded_version": "ac1d504eb9f2b274632fbbeba9ac034151e5f3543f0be732eb51145764e733a4",
+          "frames": 4130,
+          "seconds": 186.20846839994192,
+          "stale_frames": 0,
+          "result_image": "S-batch-04-round-02.png",
+          "result_sha256": "e4545a18f562bcba83fab321d10b213f6cf7899e328561e80924b5315ea2d78c"
+        },
+        {
+          "round": 3,
+          "verified_score": 8955,
+          "verified_rank": "A",
+          "automated_score": null,
+          "automated_rank": "A",
+          "loaded_version": "ac1d504eb9f2b274632fbbeba9ac034151e5f3543f0be732eb51145764e733a4",
+          "frames": 3335,
+          "seconds": 171.7313047000207,
+          "stale_frames": 0,
+          "result_image": "S-batch-04-round-03.png",
+          "result_sha256": "9e36c4b5454dd470b6c1e7d7a267d75db0998a188b46dc5c78a511544016a501"
+        }
+      ]
+    },
+    {
+      "name": "S-batch-05",
+      "local_source_directory": "artifacts/juggling-live/S-batch-05",
+      "status": "completed",
+      "rounds": [
+        {
+          "round": 1,
+          "verified_score": 8400,
+          "verified_rank": "A",
+          "automated_score": null,
+          "automated_rank": "A",
+          "loaded_version": "f54e12d7b8278f20333fd9b97a7da5c2b6e3a67dd43dfb4c352e0a3049134774",
+          "frames": 3367,
+          "seconds": 176.65621440019459,
+          "stale_frames": 0,
+          "result_image": "S-batch-05-round-01.png",
+          "result_sha256": "5214fa96182c2cb203b0e2d2609c94a096cb2ca1f4e19f2dc756f74608ab83d3"
+        },
+        {
+          "round": 2,
+          "verified_score": 9810,
+          "verified_rank": "A",
+          "automated_score": null,
+          "automated_rank": "A",
+          "loaded_version": "f54e12d7b8278f20333fd9b97a7da5c2b6e3a67dd43dfb4c352e0a3049134774",
+          "frames": 3976,
+          "seconds": 184.3236555000767,
+          "stale_frames": 0,
+          "result_image": "S-batch-05-round-02.png",
+          "result_sha256": "a2815ef05fbaee55031a7ceae904ed90a8712e2b802ed047a6e13cba9f99acd3"
+        },
+        {
+          "round": 3,
+          "verified_score": 12435,
+          "verified_rank": "A",
+          "automated_score": 12435,
+          "automated_rank": "A",
+          "loaded_version": "f54e12d7b8278f20333fd9b97a7da5c2b6e3a67dd43dfb4c352e0a3049134774",
+          "frames": 4493,
+          "seconds": 205.78923340002075,
+          "stale_frames": 0,
+          "result_image": "S-batch-05-round-03.png",
+          "result_sha256": "12765d18b45d06a0a367f18d233279fab50686eacfdf2fda8aab57e99276d6d9"
+        }
+      ]
+    }
+  ],
+  "highest_verified_score": 12435,
+  "highest_verified_rank": "A",
+  "completed_rounds": 9,
+  "observation_frames": 34125,
+  "stale_frames": 0,
+  "regression": {
+    "juggling": {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.696
+    },
+    "project_headless": {
+      "tests": 1023,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 27.339,
+      "excluded_files": [
+        "tests/test_task_terminal_gui.py",
+        "tests/test_live_debug_ui.py"
+      ]
+    }
+  },
+  "current_configuration": {
+    "vision_profile": "profiles/juggling.live.local.json",
+    "ai_parameters": "profiles/juggling.ai.local.json",
+    "slide_enabled": false,
+    "idle_centering_enabled": true,
+    "track_flight_models_enabled": true,
+    "actual_input_projection_enabled": true
+  },
+  "batch05_inputs_sha256": {
+    "profile.json": "868aab92a4ed19e19753d428e9fbe56c36dbb883890e6178938dfa5e842ef646",
+    "parameters.json": "4811e8b6e96c3ec3d6ce82b509c56669dfb2c2d15311acf121ca7b100fb4ad9d"
+  }
+}

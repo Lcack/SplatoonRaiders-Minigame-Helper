@@ -30,6 +30,46 @@ def motion(**changes):
 SETTINGS = SearchSettings(horizon_seconds=1, step_seconds=0.1, beam_width=64)
 
 
+def test_duplicate_body_scanline_is_not_a_road_split():
+    top=entity("corridor",.3,.1,.4)
+    bottom=entity("corridor",.5,.2,.4)
+    road=Road([top,bottom,bottom])
+    assert len(road.rows[-1][1])==1
+    assert road.intervals(.15)[0]==pytest.approx((.2,.6))
+    from raiders_helper.mining_reactive import _sweep_constraints
+    assert _sweep_constraints(road,.12,.18,.01,.01) is not None
+
+
+def test_overlapping_regions_merge_but_observed_gap_is_preserved():
+    road=Road([entity("corridor",.3,.2,.4),entity("corridor",.5,.2,.4),
+               entity("corridor",.8,.2,.1998)])
+    assert len(road.rows[0][1])==2
+    assert road.rows[0][1][0]==pytest.approx((.1,.7))
+    assert road.rows[0][1][1][0]>.7
+    split=Road([entity("corridor",x,y,.2) for y in (.1,.5) for x in (.2,.8)])
+    assert not split.swept_safe(.2,.15,.8,.45,.01,.01)
+
+
+def test_recorded_duplicate_scanline_does_not_inherit_rear_wake_as_current_wall():
+    import json
+    from pathlib import Path
+    from raiders_helper.mining_reactive import _spans,decide_mining_reactive
+    directory=Path(__file__).parents[1]/"artifacts/mining-A-campaign/batch-03/round-0001"
+    path=directory/"gameplay/trace.jsonl"
+    if not path.exists():pytest.skip("local real-NS observation is not bundled")
+    rows=[json.loads(s) for s in path.read_text(encoding="utf-8").splitlines()]
+    data=next(r["observation"] for r in rows if r["observation"]["sequence"]==41085)
+    obs=Observation(Game.MINING,data["timestamp"],data["sequence"],data["phase"],data["confidence"],
+                    tuple(Entity(**e) for e in data["entities"]),metrics=data["metrics"])
+    player=obs.of_kind("player")[0];road=Road(obs.of_kind("corridor"))
+    spans=_spans(road,player.y,player.w/2+.018,player.h/2+.006)
+    assert len(spans)==1 and spans[0][0]<player.x<spans[0][1]
+    parameters=json.loads((directory/"parameters.json").read_text())
+    decision=decide_mining_reactive(obs,parameters)
+    assert decision.diagnostics.get("mode")!="wall_recovery"
+    assert decision.diagnostics["wall_distance"]>.08
+
+
 def test_curved_road_without_common_x_has_a_route():
     road = [entity("corridor", x, y, 0.24, 0.001) for y, x in
             [(0, 0.5), (0.15, 0.5), (0.3, 0.7), (0.45, 0.5), (0.65, 0.3), (1, 0.3)]]

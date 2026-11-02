@@ -1,0 +1,237 @@
+{
+  "source_url": "https://www.youtube.com/watch?v=l3dMQV1sar8",
+  "source_file": "artifacts\\reference_videos\\utagaming-l3dMQV1sar8\\reference.mp4",
+  "source_sha256": "58bbc11ae82d4bae106439a1374f6d0248b4f2de889167626bf7ea49a7cff071",
+  "canonical_crop_xywh": [
+    320,
+    55,
+    1280,
+    960
+  ],
+  "canonical_size": [
+    640,
+    480
+  ],
+  "records": [
+    {
+      "path": "cursor.png",
+      "frame": 19399,
+      "seconds": 323.31666666666666,
+      "bbox_xywh_canonical": [
+        37,
+        159,
+        40,
+        36
+      ],
+      "sha256": "c05a10db85b38e699ec8e11eed659d5d76fc9c79f2b610c32a0cc4adf456ffdd",
+      "description": "真实MINING选中光标；同一图标在另三行的复用是工程推断，HOPPING选中另有真实帧验证。"
+    },
+    {
+      "path": "label-mining.png",
+      "frame": 19399,
+      "seconds": 323.31666666666666,
+      "bbox_xywh_canonical": [
+        80,
+        163,
+        128,
+        31
+      ],
+      "sha256": "ef20732fae1931152c45d4bcfc550e07625e6584c107cff11f15669afbebecbd",
+      "description": "四项选择页中的MINING文字；JUGGLING/LANDING在该参考片段未观察到被选中。"
+    },
+    {
+      "path": "label-hopping.png",
+      "frame": 19399,
+      "seconds": 323.31666666666666,
+      "bbox_xywh_canonical": [
+        80,
+        208,
+        151,
+        31
+      ],
+      "sha256": "c092146e5e79cef7b11d952f6055375909d4ed5cbaaedf397a723222f95697c1",
+      "description": "四项选择页中的HOPPING文字；JUGGLING/LANDING在该参考片段未观察到被选中。"
+    },
+    {
+      "path": "label-juggling.png",
+      "frame": 19399,
+      "seconds": 323.31666666666666,
+      "bbox_xywh_canonical": [
+        80,
+        253,
+        168,
+        31
+      ],
+      "sha256": "979d0600de9c50d9ffcf4ad4817aabfca3bcfa17add425fa7ae2f9059787b2d7",
+      "description": "四项选择页中的JUGGLING文字；JUGGLING/LANDING在该参考片段未观察到被选中。"
+    },
+    {
+      "path": "label-landing.png",
+      "frame": 19399,
+      "seconds": 323.31666666666666,
+      "bbox_xywh_canonical": [
+        80,
+        298,
+        150,
+        31
+      ],
+      "sha256": "9b22f9fa60cc8ce1f9f5d472c7002726abb083fd2dfa22ee7dd33fa5fbbee588",
+      "description": "四项选择页中的LANDING文字；JUGGLING/LANDING在该参考片段未观察到被选中。"
+    },
+    {
+      "path": "countdown-3.png",
+      "frame": 19560,
+      "seconds": 326.0,
+      "bbox_xywh_canonical": [
+        258,
+        129,
+        192,
+        225
+      ],
+      "sha256": "f966f05d5a7fabfc972473fe422253d4eaeb57e6e0f281f4bef5fefde6073953",
+      "description": "真实开局倒数3，不是游戏标题。"
+    },
+    {
+      "path": "countdown-2.png",
+      "frame": 19620,
+      "seconds": 327.0,
+      "bbox_xywh_canonical": [
+        258,
+        129,
+        192,
+        225
+      ],
+      "sha256": "cd67eba5586a9a3278efac514f9bc787d4cf498330eab2d0496e20675dddf1b3",
+      "description": "真实开局倒数2，不是游戏标题。"
+    },
+    {
+      "path": "countdown-1.png",
+      "frame": 39910,
+      "seconds": 665.1666666666666,
+      "bbox_xywh_canonical": [
+        258,
+        129,
+        192,
+        225
+      ],
+      "sha256": "bb491618ab8c3ccad0eff704c578a57f978ecf0ab490a679db63b557227e0ab5",
+      "description": "真实开局倒数1，不是游戏标题。",
+      "extraction_note": "由39780帧起连续解码保存的juggling-start-39910.png提取，已目视确认大号1。"
+    },
+    {
+      "path": "initial-mining.png",
+      "frame": 244,
+      "seconds": 4.066666666666666,
+      "bbox_xywh_canonical": [
+        0,
+        0,
+        200,
+        33
+      ],
+      "sha256": "8b5b5d81ba28b3602ec6ea4a4bf8f3d447019853f0c7fb5c5095a05166b5822f",
+      "description": "MINING开局TIME40.0，仅参考实况初始倒数签名。"
+    },
+    {
+      "path": "initial-hopping.png",
+      "frame": 19560,
+      "seconds": 326.0,
+      "bbox_xywh_canonical": [
+        95,
+        450,
+        450,
+        28
+      ],
+      "sha256": "974f281c48d80093227ebc8d5a1d22bf28eba8080c0e9c3ba5e8a400a984d9fc",
+      "description": "HOPPING开局底部砖地签名，仅此参考画面。"
+    },
+    {
+      "path": "initial-juggling.png",
+      "frame": 39840,
+      "seconds": 664.0,
+      "bbox_xywh_canonical": [
+        245,
+        0,
+        112,
+        30
+      ],
+      "sha256": "2542aaa0f9aeed0f17060659222f205e650d4e18bbadcb035a5f70cbc81deeb6",
+      "description": "JUGGLING开局五个心形生命图标，仅初始倒数签名。"
+    },
+    {
+      "path": "initial-landing.png",
+      "frame": 57780,
+      "seconds": 963.0,
+      "bbox_xywh_canonical": [
+        0,
+        450,
+        250,
+        30
+      ],
+      "sha256": "8b7034c090ea7137979d13e200e421a690bde595e1c0d784a81d40a27dec5d57",
+      "description": "LANDING开局STAGE01/10，仅该参考开局签名。"
+    },
+    {
+      "path": "result-cursor.png",
+      "frame": 19200,
+      "seconds": 320.0,
+      "bbox_xywh_canonical": [
+        219,
+        246,
+        40,
+        36
+      ],
+      "sha256": "9117766ecc8283b6caa692ea897dba43377eea72668b2af29fd733a322c3199d",
+      "description": "MINING结果RETRY选中光标；QUIT行复用同图标，有JUGGLING结果真实帧验证。"
+    },
+    {
+      "path": "result-retry.png",
+      "frame": 19200,
+      "seconds": 320.0,
+      "bbox_xywh_canonical": [
+        265,
+        247,
+        113,
+        34
+      ],
+      "sha256": "9370bf4fe39a26d301f8ff35750dabbf952809a7e145d1d59334d60a46f345cf",
+      "description": "结果菜单RETRY文字，无按键提示。"
+    },
+    {
+      "path": "result-quit.png",
+      "frame": 19200,
+      "seconds": 320.0,
+      "bbox_xywh_canonical": [
+        265,
+        283,
+        95,
+        34
+      ],
+      "sha256": "464bcc4521036f082d41f257cf4d7189238567fbbbc2c083be8405d438a2e967",
+      "description": "结果菜单QUIT文字，无按键提示。"
+    },
+    {
+      "path": "result-rank.png",
+      "frame": 19200,
+      "seconds": 320.0,
+      "bbox_xywh_canonical": [
+        190,
+        203,
+        103,
+        31
+      ],
+      "sha256": "3a312433a7e49adeb51373c84e8e884318f39a303f58fc995dcfea3723f99664",
+      "description": "结果菜单RANK文字，避开可变分数/级别。"
+    }
+  ],
+  "observations": [
+    "四游戏在选择页竖排，MINING/HOPPING/JUGGLING/LANDING。",
+    "四游戏结果均观察到SCORE/RANK/RETRY/QUIT，结果光标可位于RETRY或QUIT。",
+    "选择页明确B Exit用于退出游戏机；没有画面证据证明进入与结果确认的按键。",
+    "JUGGLING/LANDING转场没有可见选择页，未伪造选中截图。"
+  ],
+  "limitations": [
+    "当前参考录播的模板，未测实机采集变换、语言差异、确认按键、导航按键或重复间隔。",
+    "倒数识别只覆盖带初始签名的3/2/1，不是全部游戏阶段检测。",
+    "阈值、共享光标的位置复用属于工程推断。"
+  ]
+}

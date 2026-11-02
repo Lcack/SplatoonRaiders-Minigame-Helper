@@ -1,0 +1,139 @@
+{
+  "snapshot_date": "2026-11-03",
+  "round": "artifacts/juggling-live/S-batch-05/worker-0003/round-0003",
+  "scene": {
+    "source": "artifacts\\juggling-live\\S-batch-05\\worker-0003\\round-0003\\frame-00360319.jpg",
+    "sequence": 360319
+  },
+  "trajectory": {
+    "source": "artifacts\\juggling-live\\S-batch-05\\worker-0003\\round-0003\\frame-00365882.jpg",
+    "sequence": 365882,
+    "track_id": "1123",
+    "model": {
+      "accepted": true,
+      "source": "current_track_quadratic_window",
+      "confidence_kind": "model_fit_not_observation_or_probability",
+      "samples": 12,
+      "window_seconds": 0.6685560001060367,
+      "timestamp": 2390870.2248676,
+      "x": 0.2511805285438075,
+      "y": 0.35903752894445856,
+      "vx": -0.2660372151417396,
+      "vy": 0.7344165765658062,
+      "gravity": 1.2972379779550665,
+      "fit_rmse_pixels": [
+        0.30651298107310454,
+        0.3060169907892829
+      ],
+      "last_two_prediction_error_pixels": [
+        0.3099623923746009,
+        0.9918674488355261
+      ],
+      "reason": "current_shape_and_temporal_fit_passed"
+    },
+    "history_samples": 12
+  },
+  "fever": {
+    "initial_source": "artifacts\\juggling-live\\S-batch-05\\worker-0003\\round-0003\\frame-00354174.jpg",
+    "active_source": "artifacts\\juggling-live\\S-batch-05\\worker-0003\\round-0003\\frame-00357813.jpg"
+  },
+  "batches": [
+    {
+      "batch": 3,
+      "completed": 3,
+      "ranks": [
+        "A",
+        "A",
+        "A"
+      ],
+      "frames": 11398,
+      "seconds": 543.9881921005435,
+      "stale_frames": 0
+    },
+    {
+      "batch": 4,
+      "completed": 3,
+      "ranks": [
+        "A",
+        "A",
+        "A"
+      ],
+      "frames": 10891,
+      "seconds": 515.879978899844,
+      "stale_frames": 0
+    },
+    {
+      "batch": 5,
+      "completed": 3,
+      "ranks": [
+        "A",
+        "A",
+        "A"
+      ],
+      "frames": 11836,
+      "seconds": 566.769103300292,
+      "stale_frames": 0
+    }
+  ],
+  "current_sources": {
+    "src/raiders_helper/active_ai_status.py": "8925fb340e6a2235892115225a033e59c3e33e52d5fc3303b3429b9777fbed62",
+    "src/raiders_helper/advice_overlay.py": "80c1a5ba06f53b7da373f2c7d72fabffa87a3f5715d5e34129242a6651719754",
+    "src/raiders_helper/analysis_worker.py": "8cd836cee2815dc2344994eee1c2d7beae1e39727c73462b9cf0c3dd29c784f5",
+    "src/raiders_helper/arcade_vision.py": "df7110e01f5c9f72dd1c7fef662b1669c3e317878b975cf3f12518f5180b241a",
+    "src/raiders_helper/cli.py": "4f693baff7fb3ebba8d55c911ba9007600999f78d1e96e55971b331f551b3f7b",
+    "src/raiders_helper/debug_api.py": "06161f0d183ff7c9ba408e605cf710c89407a9cb36256d4a7b7ef20c5e0142b6",
+    "src/raiders_helper/demo.py": "392290e06585c6cffff2d3a25c16c81e7fa724b3e05b62cb454fd5150eb608f9",
+    "src/raiders_helper/experiment_recording.py": "f2b546022688d7a04a19d97696e26dfdd9a6e6a6064dcca7c015bfc8cd584110",
+    "src/raiders_helper/fast_tracking.py": "cbb941fe6157dfc6acb564d934d740a6cf103d0a8d2b551719e66c1ce9b7c3ef",
+    "src/raiders_helper/gui.py": "324d45ed75742a7105ea0aa14bd98422d595d75b97c4103df1b2195ab101a38d",
+    "src/raiders_helper/hopping.py": "a5414019cdab29c646140f853316df85922fc521a3e20f3df988f0143eaa618c",
+    "src/raiders_helper/juggling.py": "31414538b36ed97dbc380ecf15b8e9220ab3d813a0612d52a347d428b1854741",
+    "src/raiders_helper/juggling_fever.py": "1d408a2fddc9816dbfd82d9f2448453e2cd2e3e075ff4094377df4616d5190ef",
+    "src/raiders_helper/juggling_prediction.py": "94b3171126dc12b3ca1139eaef47b3d6e1e744cc0b6cd70524acf0e8a1c5ea60",
+    "src/raiders_helper/landing.py": "92bd1cca511380bcc26305b5b8fb4bc605f9a009f816ed574f13428493cabdc1",
+    "src/raiders_helper/manual_input_pump.py": "0fd2dcc57cc98c0624b1a691a1179328696308babaa9e3191e88f1ce73767696",
+    "src/raiders_helper/mining_collision.py": "a65aaca400b9ffc752274c34a6d1c276cc9943ca1c7aba6b9fee371dcee87aa2",
+    "src/raiders_helper/mining_evaluation.py": "cfc4e0f4b294b5df9b2a98373b4a81c63e7f46b1840bfdfa8f04368f387a1880",
+    "src/raiders_helper/mining_forward.py": "b63af1fe2463b55530db22d5919f09688afa3d85dde9114b9a3a1104887f5040",
+    "src/raiders_helper/mining_forward_seed.py": "212b044c9afb56a8550bcd55b72e2d16ad49ac9eb351aa6c2f212863d4d10036",
+    "src/raiders_helper/mining_identification.py": "c9898d8e0e3b1ba411c0de317b8e7cc55d46b0fefa9069e445a183e75f57140e",
+    "src/raiders_helper/mining_mixed_guard.py": "b39b532ced269ee4f8530e5a40a076fdb2892dff20d2a1ab96e187b54e9bda1d",
+    "src/raiders_helper/mining_motion.py": "30f24ba525117eb25a9c96eb68d6b05f8b9f7247bd9bab8cfd9da5762b3eb23c",
+    "src/raiders_helper/mining_planner.py": "23f1aae56aa2cde93095626438dc1554203101b20a887bce7fa67367f135cccb",
+    "src/raiders_helper/mining_reactive.py": "8a2399b0c7318014a32afc4c6d7aba06ba61cee51c71fbd9be375a3c52a0ff61",
+    "src/raiders_helper/mining_result_reader.py": "dcdb97cbe63163ac0f3a2f24ed9162721fdc0f64c9c589070285851481b14f83",
+    "src/raiders_helper/mining_scroll.py": "5f813c852c09509c370f76d56ed3be1dab5c68f9283a4709cf49267479a9f9aa",
+    "src/raiders_helper/mining_vision.py": "980727e744b9e57b5def4a89bd322555f2bdb5ae85df220688e61e6b9d234723",
+    "src/raiders_helper/models.py": "fdf2e3bf498dd2bf77ebfe4df62534c9c6d4595df5e28f0db9a327a2b976214f",
+    "src/raiders_helper/motion_calibration.py": "c1b2edc2b0dda1094fe8765678599c4b16945a66941482a480e04805ccb67c81",
+    "src/raiders_helper/policies.py": "82b7d8eddf306469a3b7c687cf2870f41b3e62cdff1d9cc4762073f2c6eea567",
+    "src/raiders_helper/runtime.py": "5708400d82edc0f38065802e01640ef126726b9b488bfc279a80c3137c222046",
+    "src/raiders_helper/session_flow.py": "52a7db17be01bd51448f925ac354bdb26162117a4f2a02e50a7ec548f3ced1c3",
+    "src/raiders_helper/session_runtime.py": "a63810b0282bd217c2799d70676cb1293387f42d523e6af706b0a9f7827b2df4",
+    "src/raiders_helper/trace.py": "61d8a52a64972a0fc69afdf2de27c1858ad1447e5d349b0837c4f3b6596f7148",
+    "src/raiders_helper/video_analysis.py": "3e334e3f313190984e70a8efb95c91e82497854bfc19d23b22710791c25555c9",
+    "src/raiders_helper/vision.py": "7a9c8c63cd74b1366168453a4cd00bb1176759d2ff528f1de4b157da90b77789",
+    "src/raiders_helper/__init__.py": "fda48caa723924337d697d93dadae56e419e896c825e281033476e3d3b440418",
+    "src/raiders_helper/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "tools/juggling_control_model.py": "7c55066d2c91b62f067e140dd55b93e2c619a1b8902540b28247bf760a559e64",
+    "tools/juggling_hot_reload.py": "d9218662b2739d28bf538d3e433097763c113113a6061d0d7969d940b1ab52ff",
+    "tools/juggling_life_evidence.py": "95b3b9d9a82941fe23fc75de3122b699f9ee9f576984928e9d7cc121e8a331e1",
+    "tools/juggling_runtime_ui.py": "5116114e9c803c7e95ae294cf97a725eca44c434bf912919604b99c1b6a33017",
+    "tools/juggling_slide_assist.py": "24ff931c02b92e35a565d876a918699277f17f4b056a1b0fd26434e8db306aa2",
+    "tools/juggling_slide_probe.py": "7f464202a03ff32aa5097820dab54dbc1548968f4fcaf3b2d8276861f2c9b7be",
+    "tools/juggling_supervisor.py": "59846175c59d70c1092f61c5beb2e87e955ec3c6d5804cb3e08a73121e6d35be",
+    "profiles/juggling.ai.local.json": "dc99279e74e35650fb8e02949ab21d4e4f0960be84bf697f6383a0db5810b7c1",
+    "profiles/juggling.json": "534e4ce11c990fe953cc367644ad99bd3e7460e3388ee73cfe069df045958845",
+    "profiles/juggling.live.local.json": "965e422606e7a7447a700ce1809d04074a2813e1258e407ecba49554a1bcf326"
+  },
+  "latest_loaded_version": "f54e12d7b8278f20333fd9b97a7da5c2b6e3a67dd43dfb4c352e0a3049134774",
+  "images": {
+    "fever.png": "7012dc6dfca06847715aa7785eacdda8831f886c91d21675d6aeada756bb4924",
+    "input_timing.png": "afd794bf9844ba7e5408a26dd895d34fe3d07c774c45d06a29a82bac41269537",
+    "results.png": "8dfd3113bf4a2f404143aaf3b9d3c119f0da3864390e6a9d1a7656e406d3c883",
+    "runtime.png": "86214397857f700348715456973f3e9d15630ef2b75c104fea6815284e816b29",
+    "trajectory.png": "d58d90321a47c236ffb975befbed69addd908ad2cb4f9eb28a6a6ba407376347",
+    "vision.png": "787af53847a0d0615f4f660c3014e5ddec5d20fa60b1f2595ae78bfce036b0d5"
+  },
+  "terminal_source_updates_verified": "project_regression_sync.xml"
+}

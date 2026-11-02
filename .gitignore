@@ -5,3 +5,6 @@ __pycache__/
 artifacts/
 build/
 dist/
+
+# Local reference videos
+/*.mp4

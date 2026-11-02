@@ -33,6 +33,9 @@ def decide(obs, parameters=None):
         from .landing import decide_landing
         return decide_landing(obs, parameters)
     if obs.game == Game.MINING:
+        if parameters.get("algorithm") == "reactive_supervised":
+            from .mining_reactive import decide_mining_reactive
+            return decide_mining_reactive(obs, parameters)
         if parameters.get("algorithm") == "lookahead":
             from .mining_planner import planning_decision
             return planning_decision(obs, parameters)

@@ -1,0 +1,1429 @@
+{
+  "source": "user_provided_local_all_S_video",
+  "video_file": "【斯普拉遁涂击队】小游戏全S通关视角 - 1.【斯普拉遁涂击队】小游戏全S通关视角(Av117006586158341,P1).mp4",
+  "video_sha256": "d05ab6d8b3a162f770778966a8fee7cc778662b6e65384e3070bdc61194c8b9f",
+  "metadata": {
+    "width": 852,
+    "height": 480,
+    "fps": 30,
+    "frame_count": 36729,
+    "duration_seconds": 1224.3
+  },
+  "video_viewport_xywh": [
+    142,
+    26,
+    568,
+    428
+  ],
+  "viewport_status": "visual crop +-2 source pixels; not live world/body calibration",
+  "canonical_size": [
+    640,
+    480
+  ],
+  "switches": {
+    "floor_backend": "adaptive_inner",
+    "detect_time_stars": true,
+    "default_floor_backend": "legacy",
+    "default_detect_time_stars": false,
+    "large_rocks": true,
+    "default_large_rocks": false
+  },
+  "scope": "limited source-indexed visual regression; no detection accuracy or collision-free claim",
+  "floor_and_stars": [
+    {
+      "source_file": "artifacts/mining-supervision/round-06/problem-00039385-wall_recovery.png",
+      "source_seconds": null,
+      "crop_xywh": [
+        320,
+        55,
+        1280,
+        960
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "fec3f442dea541a80ba908e786b8f91b110be0465855361b409124cebef9e45f",
+      "floor_palette": {
+        "hue": 27,
+        "saturation": 248,
+        "modal_pixels": 52121
+      },
+      "star_boxes": [],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.3671875,
+          0.7921875
+        ],
+        [
+          0.15833333333333333,
+          0.3796875,
+          0.7953125
+        ],
+        [
+          0.16041666666666668,
+          0.3796875,
+          0.7953125
+        ],
+        [
+          0.17916666666666667,
+          0.4015625,
+          0.815625
+        ],
+        [
+          0.19166666666666668,
+          0.39375,
+          0.815625
+        ],
+        [
+          0.2,
+          0.39375,
+          0.81875
+        ],
+        [
+          0.21875,
+          0.4109375,
+          0.846875
+        ],
+        [
+          0.22708333333333333,
+          0.415625,
+          0.8421875
+        ],
+        [
+          0.25,
+          0.446875,
+          0.878125
+        ],
+        [
+          0.2791666666666667,
+          0.44375,
+          0.8703125
+        ],
+        [
+          0.31875,
+          0.475,
+          0.89375
+        ],
+        [
+          0.36875,
+          0.521875,
+          0.9203125
+        ],
+        [
+          0.42916666666666664,
+          0.5453125,
+          0.95625
+        ],
+        [
+          0.5,
+          0.5609375,
+          0.959375
+        ],
+        [
+          0.5791666666666667,
+          0.5515625,
+          0.9484375
+        ],
+        [
+          0.6791666666666667,
+          0.5140625,
+          0.9046875
+        ],
+        [
+          0.7979166666666667,
+          0.4359375,
+          0.8234375
+        ],
+        [
+          0.9083333333333333,
+          0.3125,
+          0.771875
+        ]
+      ],
+      "inner_adjustments": [
+        [
+          0.13958333333333334,
+          0.0,
+          0.04375
+        ],
+        [
+          0.15833333333333333,
+          0.0,
+          0.0421875
+        ],
+        [
+          0.16041666666666668,
+          0.0,
+          0.0578125
+        ],
+        [
+          0.17916666666666667,
+          0.0,
+          0.04375
+        ],
+        [
+          0.19166666666666668,
+          0.0,
+          0.04375
+        ],
+        [
+          0.2,
+          0.0,
+          0.0421875
+        ],
+        [
+          0.22708333333333333,
+          0.040625,
+          0.0421875
+        ],
+        [
+          0.25,
+          0.0609375,
+          0.0
+        ],
+        [
+          0.2791666666666667,
+          0.05,
+          0.04375
+        ],
+        [
+          0.31875,
+          0.053125,
+          0.04375
+        ],
+        [
+          0.36875,
+          0.0734375,
+          0.053125
+        ],
+        [
+          0.42916666666666664,
+          0.0609375,
+          0.0
+        ],
+        [
+          0.5,
+          0.0609375,
+          0.040625
+        ],
+        [
+          0.5791666666666667,
+          0.059375,
+          0.0515625
+        ],
+        [
+          0.6791666666666667,
+          0.0609375,
+          0.0421875
+        ],
+        [
+          0.7979166666666667,
+          0.0609375,
+          0.04375
+        ],
+        [
+          0.9083333333333333,
+          0.0,
+          0.040625
+        ]
+      ],
+      "overlay": "artifacts/mining-color-study/problem-00039385-wall_recovery-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": [
+        {
+          "x": 0.36796875,
+          "y": 0.19270833333333334,
+          "w": 0.0515625,
+          "h": 0.06875
+        }
+      ]
+    },
+    {
+      "source_file": "artifacts/reference-video-index/mining-source-0030.0s.png",
+      "source_seconds": 30,
+      "crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "ad10a5b7a099f579c5db8b229a25562f26b9d10a1cc9e820fca45d2a24bddabf",
+      "floor_palette": {
+        "hue": 27,
+        "saturation": 232,
+        "modal_pixels": 23309
+      },
+      "star_boxes": [],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.521875,
+          0.8625
+        ],
+        [
+          0.15416666666666667,
+          0.515625,
+          0.8609375
+        ],
+        [
+          0.16041666666666668,
+          0.515625,
+          0.85625
+        ],
+        [
+          0.17916666666666667,
+          0.484375,
+          0.83125
+        ],
+        [
+          0.19166666666666668,
+          0.4828125,
+          0.8328125
+        ],
+        [
+          0.2,
+          0.4828125,
+          0.83125
+        ],
+        [
+          0.21875,
+          0.446875,
+          0.8
+        ],
+        [
+          0.22916666666666666,
+          0.45625,
+          0.790625
+        ],
+        [
+          0.25,
+          0.4515625,
+          0.8
+        ],
+        [
+          0.2791666666666667,
+          0.428125,
+          0.746875
+        ],
+        [
+          0.31875,
+          0.3703125,
+          0.7
+        ],
+        [
+          0.36875,
+          0.378125,
+          0.6671875
+        ],
+        [
+          0.42916666666666664,
+          0.371875,
+          0.678125
+        ],
+        [
+          0.5,
+          0.3109375,
+          0.609375
+        ],
+        [
+          0.5791666666666667,
+          0.2421875,
+          0.5953125
+        ],
+        [
+          0.6791666666666667,
+          0.1890625,
+          0.528125
+        ],
+        [
+          0.7979166666666667,
+          0.084375,
+          0.465625
+        ],
+        [
+          0.9083333333333333,
+          0.075,
+          0.4453125
+        ]
+      ],
+      "inner_adjustments": [
+        [
+          0.13958333333333334,
+          0.0578125,
+          0.0375
+        ],
+        [
+          0.15416666666666667,
+          0.0515625,
+          0.0390625
+        ],
+        [
+          0.16041666666666668,
+          0.0515625,
+          0.04375
+        ],
+        [
+          0.17916666666666667,
+          0.0515625,
+          0.0484375
+        ],
+        [
+          0.19166666666666668,
+          0.05,
+          0.0421875
+        ],
+        [
+          0.2,
+          0.05,
+          0.046875
+        ],
+        [
+          0.21875,
+          0.0,
+          0.0484375
+        ],
+        [
+          0.22916666666666666,
+          0.0453125,
+          0.0515625
+        ],
+        [
+          0.25,
+          0.0421875,
+          0.040625
+        ],
+        [
+          0.2791666666666667,
+          0.0,
+          0.0453125
+        ],
+        [
+          0.31875,
+          0.0203125,
+          0.0859375
+        ],
+        [
+          0.36875,
+          0.0578125,
+          0.0953125
+        ],
+        [
+          0.42916666666666664,
+          0.09375,
+          0.040625
+        ],
+        [
+          0.5,
+          0.0609375,
+          0.0875
+        ],
+        [
+          0.5791666666666667,
+          0.0390625,
+          0.05625
+        ],
+        [
+          0.6791666666666667,
+          0.0796875,
+          0.0453125
+        ],
+        [
+          0.7979166666666667,
+          0.053125,
+          0.0515625
+        ],
+        [
+          0.9083333333333333,
+          0.075,
+          0.040625
+        ]
+      ],
+      "overlay": "artifacts/mining-color-study/mining-source-0030.0s-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": [
+        {
+          "x": 0.715625,
+          "y": 0.19166666666666668,
+          "w": 0.05,
+          "h": 0.075
+        }
+      ]
+    },
+    {
+      "source_file": "artifacts/reference-video-index/mining-source-0090.0s.png",
+      "source_seconds": 90,
+      "crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "07ed0983d68dec20920e803dac1bde7b808ec5c3eaddb0383be94823108dc217",
+      "floor_palette": {
+        "hue": 45,
+        "saturation": 232,
+        "modal_pixels": 26290
+      },
+      "star_boxes": [],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.215625,
+          0.6828125
+        ],
+        [
+          0.15208333333333332,
+          0.215625,
+          0.6828125
+        ],
+        [
+          0.16041666666666668,
+          0.2140625,
+          0.6828125
+        ],
+        [
+          0.17916666666666667,
+          0.2359375,
+          0.70625
+        ],
+        [
+          0.1875,
+          0.24375,
+          0.7
+        ],
+        [
+          0.2,
+          0.246875,
+          0.7015625
+        ],
+        [
+          0.21875,
+          0.2484375,
+          0.721875
+        ],
+        [
+          0.22291666666666668,
+          0.275,
+          0.721875
+        ],
+        [
+          0.25,
+          0.2640625,
+          0.721875
+        ],
+        [
+          0.2791666666666667,
+          0.2859375,
+          0.740625
+        ],
+        [
+          0.31875,
+          0.309375,
+          0.7609375
+        ],
+        [
+          0.36875,
+          0.328125,
+          0.771875
+        ],
+        [
+          0.42916666666666664,
+          0.3453125,
+          0.7890625
+        ],
+        [
+          0.5,
+          0.35625,
+          0.784375
+        ],
+        [
+          0.5791666666666667,
+          0.34375,
+          0.7671875
+        ],
+        [
+          0.6791666666666667,
+          0.303125,
+          0.721875
+        ],
+        [
+          0.7979166666666667,
+          0.26875,
+          0.6796875
+        ],
+        [
+          0.9083333333333333,
+          0.2328125,
+          0.6265625
+        ]
+      ],
+      "inner_adjustments": [],
+      "overlay": "artifacts/mining-color-study/mining-source-0090.0s-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": [
+        {
+          "x": 0.43125,
+          "y": 0.1875,
+          "w": 0.053125,
+          "h": 0.07083333333333333
+        }
+      ]
+    },
+    {
+      "source_file": "artifacts/reference-video-index/mining-source-0150.0s.png",
+      "source_seconds": 150,
+      "crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "981e4573923680dc81b8e6e576294f4d436fe6aa8d50621607d0601748589f5f",
+      "floor_palette": {
+        "hue": 93,
+        "saturation": 216,
+        "modal_pixels": 23790
+      },
+      "star_boxes": [],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.4359375,
+          0.69375
+        ],
+        [
+          0.16041666666666668,
+          0.4359375,
+          0.6796875
+        ],
+        [
+          0.17916666666666667,
+          0.46875,
+          0.671875
+        ],
+        [
+          0.2,
+          0.4578125,
+          0.6609375
+        ],
+        [
+          0.21875,
+          0.421875,
+          0.653125
+        ],
+        [
+          0.25,
+          0.446875,
+          0.6375
+        ],
+        [
+          0.2791666666666667,
+          0.4421875,
+          0.6375
+        ],
+        [
+          0.31875,
+          0.4328125,
+          0.6296875
+        ],
+        [
+          0.36875,
+          0.21875,
+          0.6234375
+        ],
+        [
+          0.42916666666666664,
+          0.221875,
+          0.6296875
+        ],
+        [
+          0.5,
+          0.2390625,
+          0.653125
+        ],
+        [
+          0.5791666666666667,
+          0.2671875,
+          0.6828125
+        ],
+        [
+          0.6791666666666667,
+          0.303125,
+          0.728125
+        ],
+        [
+          0.7979166666666667,
+          0.3484375,
+          0.7703125
+        ],
+        [
+          0.9083333333333333,
+          0.3578125,
+          0.7828125
+        ]
+      ],
+      "inner_adjustments": [],
+      "overlay": "artifacts/mining-color-study/mining-source-0150.0s-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": []
+    },
+    {
+      "source_file": "artifacts/reference-video-index/mining-source-0210.0s.png",
+      "source_seconds": 210,
+      "crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "08abe1d39f17296862f67a5a5e43296cf46c8d1cb48e8fc2b26657e29dbaf2a5",
+      "floor_palette": {
+        "hue": 93,
+        "saturation": 216,
+        "modal_pixels": 28143
+      },
+      "star_boxes": [
+        {
+          "x": 0.709375,
+          "y": 0.7541666666666667,
+          "w": 0.03125,
+          "h": 0.029166666666666667
+        },
+        {
+          "x": 0.771875,
+          "y": 0.75625,
+          "w": 0.03125,
+          "h": 0.025
+        },
+        {
+          "x": 0.709375,
+          "y": 0.8354166666666667,
+          "w": 0.03125,
+          "h": 0.03333333333333333
+        },
+        {
+          "x": 0.771875,
+          "y": 0.8364583333333333,
+          "w": 0.03125,
+          "h": 0.027083333333333334
+        },
+        {
+          "x": 0.709375,
+          "y": 0.9208333333333333,
+          "w": 0.03125,
+          "h": 0.029166666666666667
+        },
+        {
+          "x": 0.77265625,
+          "y": 0.9229166666666667,
+          "w": 0.0296875,
+          "h": 0.025
+        }
+      ],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.19375,
+          0.5421875
+        ],
+        [
+          0.15416666666666667,
+          0.19375,
+          0.5421875
+        ],
+        [
+          0.16041666666666668,
+          0.19375,
+          0.5421875
+        ],
+        [
+          0.17916666666666667,
+          0.2203125,
+          0.5484375
+        ],
+        [
+          0.1875,
+          0.2234375,
+          0.571875
+        ],
+        [
+          0.2,
+          0.221875,
+          0.575
+        ],
+        [
+          0.21875,
+          0.221875,
+          0.578125
+        ],
+        [
+          0.22291666666666668,
+          0.2453125,
+          0.5953125
+        ],
+        [
+          0.25,
+          0.25,
+          0.6015625
+        ],
+        [
+          0.2791666666666667,
+          0.2734375,
+          0.6296875
+        ],
+        [
+          0.31875,
+          0.2921875,
+          0.6515625
+        ],
+        [
+          0.36875,
+          0.3140625,
+          0.6796875
+        ],
+        [
+          0.42916666666666664,
+          0.3484375,
+          0.7140625
+        ],
+        [
+          0.5,
+          0.3796875,
+          0.75625
+        ],
+        [
+          0.5791666666666667,
+          0.4296875,
+          0.8171875
+        ],
+        [
+          0.6791666666666667,
+          0.5,
+          0.884375
+        ],
+        [
+          0.7979166666666667,
+          0.5390625,
+          0.9484375
+        ],
+        [
+          0.9083333333333333,
+          0.5453125,
+          0.9578125
+        ]
+      ],
+      "inner_adjustments": [],
+      "overlay": "artifacts/mining-color-study/mining-source-0210.0s-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": [
+        {
+          "x": 0.40625,
+          "y": 0.18854166666666666,
+          "w": 0.046875,
+          "h": 0.06875
+        }
+      ]
+    },
+    {
+      "source_file": "artifacts/reference-video-index/mining-source-0270.0s.png",
+      "source_seconds": 270,
+      "crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "810f52701c8f2a0470143f631308342b3e542d2f184640510f2ba62ab69edcd1",
+      "floor_palette": {
+        "hue": 9,
+        "saturation": 200,
+        "modal_pixels": 30163
+      },
+      "star_boxes": [],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.1921875,
+          0.4328125
+        ],
+        [
+          0.16041666666666668,
+          0.1796875,
+          0.4296875
+        ],
+        [
+          0.17916666666666667,
+          0.20625,
+          0.425
+        ],
+        [
+          0.2,
+          0.2515625,
+          0.4140625
+        ],
+        [
+          0.21875,
+          0.2,
+          0.453125
+        ],
+        [
+          0.25,
+          0.2796875,
+          0.6875
+        ],
+        [
+          0.2791666666666667,
+          0.2921875,
+          0.68125
+        ],
+        [
+          0.31875,
+          0.296875,
+          0.7015625
+        ],
+        [
+          0.36875,
+          0.340625,
+          0.75
+        ],
+        [
+          0.42916666666666664,
+          0.3390625,
+          0.771875
+        ],
+        [
+          0.5,
+          0.3703125,
+          0.828125
+        ],
+        [
+          0.5791666666666667,
+          0.4875,
+          0.8875
+        ],
+        [
+          0.6791666666666667,
+          0.4953125,
+          0.9328125
+        ],
+        [
+          0.7979166666666667,
+          0.55625,
+          0.9625
+        ],
+        [
+          0.9083333333333333,
+          0.4875,
+          0.940625
+        ]
+      ],
+      "inner_adjustments": [
+        [
+          0.13958333333333334,
+          0.01875,
+          0.0
+        ],
+        [
+          0.17916666666666667,
+          0.0125,
+          0.015625
+        ],
+        [
+          0.2,
+          0.05625,
+          0.025
+        ],
+        [
+          0.25,
+          0.059375,
+          0.0
+        ],
+        [
+          0.2791666666666667,
+          0.059375,
+          0.0265625
+        ],
+        [
+          0.31875,
+          0.0390625,
+          0.0265625
+        ],
+        [
+          0.36875,
+          0.053125,
+          0.0
+        ],
+        [
+          0.42916666666666664,
+          0.01875,
+          0.0
+        ],
+        [
+          0.5791666666666667,
+          0.0625,
+          0.0
+        ],
+        [
+          0.6791666666666667,
+          0.0171875,
+          0.0
+        ],
+        [
+          0.7979166666666667,
+          0.05625,
+          0.0
+        ],
+        [
+          0.9083333333333333,
+          0.015625,
+          0.0
+        ]
+      ],
+      "overlay": "artifacts/mining-color-study/mining-source-0270.0s-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": []
+    },
+    {
+      "source_file": "artifacts/reference-video-index/mining-source-0300.0s.png",
+      "source_seconds": 300,
+      "crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "crop_status": "video visually estimated +-2 source pixels; live capture established crop",
+      "canonical_size": [
+        640,
+        480
+      ],
+      "source_sha256": "9884095827dac61a1f12771384a51a867b942e684659dc8c63b0e108ee2c83d6",
+      "floor_palette": {
+        "hue": 27,
+        "saturation": 232,
+        "modal_pixels": 34976
+      },
+      "star_boxes": [],
+      "road_rows": [
+        [
+          0.13958333333333334,
+          0.184375,
+          0.6421875
+        ],
+        [
+          0.15416666666666667,
+          0.1625,
+          0.5859375
+        ],
+        [
+          0.16041666666666668,
+          0.10625,
+          0.5859375
+        ],
+        [
+          0.17916666666666667,
+          0.11875,
+          0.4609375
+        ],
+        [
+          0.1875,
+          0.121875,
+          0.559375
+        ],
+        [
+          0.2,
+          0.1296875,
+          0.55625
+        ],
+        [
+          0.21875,
+          0.1296875,
+          0.5171875
+        ],
+        [
+          0.22291666666666668,
+          0.1296875,
+          0.5171875
+        ],
+        [
+          0.25,
+          0.0609375,
+          0.5671875
+        ],
+        [
+          0.2791666666666667,
+          0.0859375,
+          0.49375
+        ],
+        [
+          0.31875,
+          0.0609375,
+          0.484375
+        ],
+        [
+          0.36875,
+          0.046875,
+          0.4703125
+        ],
+        [
+          0.42916666666666664,
+          0.03125,
+          0.4671875
+        ],
+        [
+          0.5,
+          0.0359375,
+          0.475
+        ],
+        [
+          0.5791666666666667,
+          0.0640625,
+          0.4765625
+        ],
+        [
+          0.6791666666666667,
+          0.1359375,
+          0.521875
+        ],
+        [
+          0.7979166666666667,
+          0.20625,
+          0.6
+        ],
+        [
+          0.9083333333333333,
+          0.259375,
+          0.665625
+        ]
+      ],
+      "inner_adjustments": [
+        [
+          0.13958333333333334,
+          0.0390625,
+          0.0
+        ],
+        [
+          0.15416666666666667,
+          0.05625,
+          0.040625
+        ],
+        [
+          0.16041666666666668,
+          0.0,
+          0.040625
+        ],
+        [
+          0.1875,
+          0.0,
+          0.053125
+        ],
+        [
+          0.2,
+          0.053125,
+          0.0421875
+        ],
+        [
+          0.21875,
+          0.0421875,
+          0.0796875
+        ],
+        [
+          0.22291666666666668,
+          0.059375,
+          0.06875
+        ],
+        [
+          0.2791666666666667,
+          0.046875,
+          0.0578125
+        ],
+        [
+          0.31875,
+          0.0546875,
+          0.046875
+        ],
+        [
+          0.36875,
+          0.046875,
+          0.04375
+        ],
+        [
+          0.42916666666666664,
+          0.03125,
+          0.0328125
+        ],
+        [
+          0.5,
+          0.0359375,
+          0.0203125
+        ],
+        [
+          0.5791666666666667,
+          0.0421875,
+          0.040625
+        ],
+        [
+          0.6791666666666667,
+          0.0671875,
+          0.0421875
+        ],
+        [
+          0.7979166666666667,
+          0.0421875,
+          0.046875
+        ],
+        [
+          0.9083333333333333,
+          0.03125,
+          0.046875
+        ]
+      ],
+      "overlay": "artifacts/mining-color-study/mining-source-0300.0s-innerbounds.png",
+      "overlay_colors": "red=legacy outer bounds, green=experimental inner bounds, magenta=time-star candidates",
+      "scope": "source-indexed diagnostic; not accuracy assessment",
+      "player_boxes": [
+        {
+          "x": 0.4265625,
+          "y": 0.18854166666666666,
+          "w": 0.05,
+          "h": 0.06875
+        }
+      ]
+    }
+  ],
+  "powered_transitions": [
+    [
+      2092,
+      2100
+    ],
+    [
+      4328,
+      4335
+    ],
+    [
+      5730,
+      5738
+    ],
+    [
+      8078,
+      8085
+    ]
+  ],
+  "powered_source_frames": [
+    {
+      "file": "frame-002092.png",
+      "requested_seconds": 69.75,
+      "frame_index": 2092,
+      "nominal_frame_seconds": 69.73333333333333,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-002092.png",
+      "source_sha256": "be9e1848c93cef2573d5c62d23f5430d62f2079fae10af5f35b25f2fcd7528af"
+    },
+    {
+      "file": "frame-002100.png",
+      "requested_seconds": 70,
+      "frame_index": 2100,
+      "nominal_frame_seconds": 70.0,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-002100.png",
+      "source_sha256": "06579f24eb129f8782ce166f0bb7fffd9ac6b9fc050f61e9591e87ace4f913eb"
+    },
+    {
+      "file": "frame-002348.png",
+      "requested_seconds": 78.25,
+      "frame_index": 2348,
+      "nominal_frame_seconds": 78.26666666666667,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-002348.png",
+      "source_sha256": "719e55fdf21623b3960b2b34079943499181ae7335851b844a272c686bc409ed"
+    },
+    {
+      "file": "frame-002355.png",
+      "requested_seconds": 78.5,
+      "frame_index": 2355,
+      "nominal_frame_seconds": 78.5,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-002355.png",
+      "source_sha256": "b89c8b4e3d1f72141499ad0bd2e1c9b930f4c3c1217eec2daec49f7a6bc342c9"
+    },
+    {
+      "file": "frame-004328.png",
+      "requested_seconds": 144.25,
+      "frame_index": 4328,
+      "nominal_frame_seconds": 144.26666666666668,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-004328.png",
+      "source_sha256": "fd11f2bc15f5e47b3285891f2ead7694648520df7e395afb1061c11fb29e1fd3"
+    },
+    {
+      "file": "frame-004335.png",
+      "requested_seconds": 144.5,
+      "frame_index": 4335,
+      "nominal_frame_seconds": 144.5,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-004335.png",
+      "source_sha256": "9f72c2cbc34d38f8207b5948c1e3bb0a13b7c3bda633fe25da2199021123794b"
+    },
+    {
+      "file": "frame-004582.png",
+      "requested_seconds": 152.75,
+      "frame_index": 4582,
+      "nominal_frame_seconds": 152.73333333333332,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-004582.png",
+      "source_sha256": "8ae9837aa48787c8d0b7aaa9f5f404786ea4f1dc64e6f091b2696a8cedf9b4fb"
+    },
+    {
+      "file": "frame-004590.png",
+      "requested_seconds": 153,
+      "frame_index": 4590,
+      "nominal_frame_seconds": 153.0,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-004590.png",
+      "source_sha256": "f83fe49f81775032ba4fa587820c5c91fbb657715f88b2ad5b63142418cf6636"
+    },
+    {
+      "file": "frame-005730.png",
+      "requested_seconds": 191,
+      "frame_index": 5730,
+      "nominal_frame_seconds": 191.0,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-005730.png",
+      "source_sha256": "2041ed2bea5b42681f0766149c6e0747a99f62a8e4bab04b695b56ae53f6e46e"
+    },
+    {
+      "file": "frame-005738.png",
+      "requested_seconds": 191.25,
+      "frame_index": 5738,
+      "nominal_frame_seconds": 191.26666666666668,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-005738.png",
+      "source_sha256": "7ae5342b272295c6d5b810055c4b69137b69512ac04712e9c6d481e6d3efaa89"
+    },
+    {
+      "file": "frame-005992.png",
+      "requested_seconds": 199.75,
+      "frame_index": 5992,
+      "nominal_frame_seconds": 199.73333333333332,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-005992.png",
+      "source_sha256": "4feb7888cc96eab73eb6a7f1296a63363bc3a2a61db845eba6c9c8b845e0339e"
+    },
+    {
+      "file": "frame-006000.png",
+      "requested_seconds": 200,
+      "frame_index": 6000,
+      "nominal_frame_seconds": 200.0,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-006000.png",
+      "source_sha256": "07160cdd6b4afe2e0a14fe417ec21870570c8efb0c39e837ddeb8a7aa114bc41"
+    },
+    {
+      "file": "frame-008078.png",
+      "requested_seconds": 269.25,
+      "frame_index": 8078,
+      "nominal_frame_seconds": 269.26666666666665,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-008078.png",
+      "source_sha256": "8938e74041e9f99c3828afbb31f541746e851b3d9ac5911d4320fb059da29f9e"
+    },
+    {
+      "file": "frame-008085.png",
+      "requested_seconds": 269.5,
+      "frame_index": 8085,
+      "nominal_frame_seconds": 269.5,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-008085.png",
+      "source_sha256": "12337567ece82994ddcb946749704b86229e4c426ab205df3f708e880b25c367"
+    },
+    {
+      "file": "frame-008332.png",
+      "requested_seconds": 277.75,
+      "frame_index": 8332,
+      "nominal_frame_seconds": 277.73333333333335,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-008332.png",
+      "source_sha256": "4bab0d46566ec0f7dd653e9954967b0836d13acb5c86f03492765e3805db1b2d"
+    },
+    {
+      "file": "frame-008340.png",
+      "requested_seconds": 278,
+      "frame_index": 8340,
+      "nominal_frame_seconds": 278.0,
+      "source_file": "artifacts/mining-s-video-study/state-pairs/frame-008340.png",
+      "source_sha256": "42fd97a07fd60a3bd17a1294521a5a239b03f3fc76b461f520f379955a86da2a"
+    }
+  ],
+  "large_boulder": {
+    "source_file": "artifacts/reference-video-index/mining-source-0090.0s.png",
+    "source_seconds": 90.0,
+    "source_frame_index": 2700,
+    "canonical_center_xy": [
+      342,
+      246
+    ],
+    "observed_outer_radius_pixels": 77.8,
+    "search_radius_pixels": [
+      48,
+      110
+    ],
+    "min_rim_sector_support": [
+      9,
+      12
+    ],
+    "source_scope": "manually visible giant boulder; no size/accuracy calibration claim",
+    "default_enabled": false,
+    "enable_profile_key": "large_rocks",
+    "independent_of_small_circle_rocks": true
+  },
+  "sprite_occlusion_sources": {
+    "examples": [
+      {
+        "source_file": "artifacts/mining-supervision/round-08-adaptive/problem-00001947-wall_recovery.png",
+        "capture_sequence": 1947,
+        "capture_monotonic_seconds": 2216247.7937038,
+        "native_size": [
+          960,
+          540
+        ],
+        "source_sha256": "cdcd1b7f3cba8e1d80a5908e0c28103d38df8bda551ce45b6aa8ccf09cd2a246",
+        "scope": "real visible sprite/particle splits floor; corrected occlusion evidence only, physics player bbox unchanged"
+      },
+      {
+        "source_file": "artifacts/mining-supervision/round-08-adaptive/problem-00002150-wall_recovery.png",
+        "capture_sequence": 2150,
+        "capture_monotonic_seconds": 2216251.1818016,
+        "native_size": [
+          960,
+          540
+        ],
+        "source_sha256": "265817639f09bb8c7c51095bcfc5c326f6b6138884e69150bcca6f5a6c6173e7",
+        "scope": "real visible sprite/particle splits floor; corrected occlusion evidence only, physics player bbox unchanged"
+      }
+    ],
+    "normal_blue_physics_bbox_changed": false,
+    "default_legacy_changed": false,
+    "experimental_backend": "adaptive_inner",
+    "sprite_evidence": "actual coloured components intersecting measured body or compact green/blue pieces within16px; gold wall hue remains separate",
+    "not_a_collision_hitbox_estimate": true
+  }
+}

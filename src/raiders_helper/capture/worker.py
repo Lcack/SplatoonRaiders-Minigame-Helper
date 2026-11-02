@@ -8,7 +8,7 @@ from .opencv_source import OpenCvFrameSource
 
 
 class CaptureWorker:
-    def __init__(self, config: CaptureConfig, source_factory=OpenCvFrameSource):
+    def __init__(self, config: CaptureConfig, source_factory=OpenCvFrameSource, on_packet=None):
         self.config = config
         self._factory = source_factory
         self._thread = None
@@ -16,6 +16,7 @@ class CaptureWorker:
         self._lock = threading.Lock()
         self._packet = None
         self._error = ""
+        self.on_packet = on_packet
 
     @property
     def error(self):
@@ -59,8 +60,11 @@ class CaptureWorker:
                 times.append(now)
                 sequence += 1
                 fps = (len(times) - 1) / (times[-1] - times[0]) if len(times) > 1 else 0
+                packet = FramePacket(frame, now, sequence, fps)
                 with self._lock:
-                    self._packet = FramePacket(frame, now, sequence, fps)
+                    self._packet = packet
+                if self.on_packet:
+                    self.on_packet(packet)
         except Exception as error:
             with self._lock:
                 self._error = str(error)

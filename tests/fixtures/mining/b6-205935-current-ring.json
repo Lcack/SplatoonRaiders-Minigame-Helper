@@ -1,0 +1,642 @@
+{
+  "scope": "One saved B6 observation and explicit parameters; source image and full trace remain campaign artifacts. Current shapes produced by current matcher from same-frame recorded ring evidence.",
+  "observation": {
+    "game": "mining",
+    "timestamp": 2259303.7691738,
+    "sequence": 205935,
+    "phase": "playing",
+    "confidence": 0.86,
+    "entities": [
+      {
+        "kind": "player",
+        "x": 0.56640625,
+        "y": 0.19270833333333334,
+        "w": 0.0515625,
+        "h": 0.06875,
+        "confidence": 0.88,
+        "track_id": 0,
+        "vx": 0.07702179668164157,
+        "vy": 0.0,
+        "samples": 84
+      },
+      {
+        "kind": "obstacle",
+        "x": 0.6581250190734863,
+        "y": 0.7675000508626302,
+        "w": 0.09012500047683716,
+        "h": 0.12016666730244954,
+        "confidence": 0.8,
+        "track_id": 22,
+        "vx": 0.12742346112257474,
+        "vy": -0.2973210042179916,
+        "samples": 6
+      },
+      {
+        "kind": "corridor",
+        "x": 0.6000000000000001,
+        "y": 0.13958333333333334,
+        "w": 0.43125,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 6,
+        "vx": 0.18250817039780315,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.6000000000000001,
+        "y": 0.15833333333333333,
+        "w": 0.43125,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 12,
+        "vx": 0.23891883770432268,
+        "vy": -0.01769769168180174,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.6000000000000001,
+        "y": 0.16041666666666668,
+        "w": 0.43125,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 4,
+        "vx": 0.2455554720849979,
+        "vy": 0.01769769168180174,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.63203125,
+        "y": 0.17916666666666667,
+        "w": 0.43281249999999993,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 10,
+        "vx": 0.22771661627615808,
+        "vy": 0.04018528522520432,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.62890625,
+        "y": 0.19166666666666668,
+        "w": 0.42656249999999996,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 11,
+        "vx": 0.1473460458257492,
+        "vy": -0.0580454119919618,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.62890625,
+        "y": 0.2,
+        "w": 0.42656249999999996,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 21,
+        "vx": 0.24244947699036537,
+        "vy": 0.0897961025890244,
+        "samples": 39
+      },
+      {
+        "kind": "corridor",
+        "x": 0.6585937500000001,
+        "y": 0.21875,
+        "w": 0.4234375,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 8,
+        "vx": 0.18418255728218658,
+        "vy": -0.01786012676675748,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.6585937500000001,
+        "y": 0.22708333333333333,
+        "w": 0.4234375,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 7,
+        "vx": 0.2377629375824593,
+        "vy": 0.07590553875871928,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.65703125,
+        "y": 0.25,
+        "w": 0.42656250000000007,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 5,
+        "vx": -0.046456440664730245,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.684375,
+        "y": 0.2791666666666667,
+        "w": 0.41875000000000007,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 9,
+        "vx": 0.18083378351341925,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.7093750000000001,
+        "y": 0.31875,
+        "w": 0.415625,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 13,
+        "vx": 0.1674386884383514,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.73046875,
+        "y": 0.36875,
+        "w": 0.41093749999999996,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 14,
+        "vx": 0.15404359336328313,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.75625,
+        "y": 0.42916666666666664,
+        "w": 0.40625,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 15,
+        "vx": 0.12557901632876356,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.76015625,
+        "y": 0.5,
+        "w": 0.3984375,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 16,
+        "vx": 0.0636267016065735,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.74609375,
+        "y": 0.5791666666666667,
+        "w": 0.39531249999999996,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 17,
+        "vx": -0.04047248257614009,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.6859375,
+        "y": 0.6791666666666667,
+        "w": 0.390625,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 18,
+        "vx": -0.13729972451944822,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.60078125,
+        "y": 0.7979166666666667,
+        "w": 0.39843750000000006,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 19,
+        "vx": -0.2310653900449249,
+        "vy": 0.0,
+        "samples": 80
+      },
+      {
+        "kind": "corridor",
+        "x": 0.54765625,
+        "y": 0.9083333333333333,
+        "w": 0.39531250000000007,
+        "h": 0.0020833333333333333,
+        "confidence": 0.88,
+        "track_id": 20,
+        "vx": -0.1858257626589172,
+        "vy": 0.0,
+        "samples": 80
+      }
+    ],
+    "notes": [],
+    "metrics": {
+      "current_forward_speed_observed": false,
+      "current_forward_speed_confidence": 0.0,
+      "current_forward_speed_source": "tracked_landmark_consensus",
+      "current_forward_speed_units": "viewport_heights_per_second",
+      "current_forward_speed_confidence_kind": "heuristic_gate_score_not_probability",
+      "current_forward_speed_method": "paired_positions",
+      "current_forward_speed_track_ids": [],
+      "current_forward_speed_track_count": 0,
+      "observation_age_seconds": 0.08560919994488358,
+      "mining_input_history_source": "guard_submission_after",
+      "mining_input_history": [
+        {
+          "after": 2259303.1601633,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.1918166,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.232134,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.2858794,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.308028,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.3514729,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.4038141,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.4354572,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.4890009,
+          "state": {
+            "buttons": [
+              "ZR"
+            ],
+            "left_stick": {
+              "x": 16384,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.498456,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 0,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.5426873,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 4915,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.5735964,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 4915,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.6196657,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 4915,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.6508882,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 9830,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.6983919,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 9830,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.7568675,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 9830,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.7893943,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 14745,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "after": 2259303.8471345,
+          "state": {
+            "buttons": [],
+            "left_stick": {
+              "x": 14745,
+              "y": 0
+            },
+            "right_stick": {
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ],
+      "mining_input_history_observed_until": 2259303.854783,
+      "mining_input_history_gap_detected": false,
+      "mining_forward_seed": {
+        "valid": false,
+        "timestamp": 2259303.7691738,
+        "reason": "no_trustworthy_landmark_seed",
+        "source": "unavailable",
+        "fallback": "legacy_mode_speed",
+        "confidence_kind": "model_estimate_not_observation"
+      },
+      "planning_delay_seconds": 0.03,
+      "planning_delay_source": "rolling_previous_playing_policy_duration_quantile",
+      "planning_delay_samples": 32,
+      "planning_delay_quantile": 0.95,
+      "planning_delay_is_budget_not_current_measurement": true,
+      "mining_mixed_guard": {
+        "enabled": true,
+        "phase": "braking",
+        "release_at": 2259303.4667078997,
+        "first_release_at": 2259303.4809201,
+        "release_clock": "host_lease_command_request_not_backend_receipt",
+        "allow_full_fast_rearm": true,
+        "normal_decision_seen": true,
+        "release_requested_at": 2259303.4667078997,
+        "release_backend_receipt_after": 2259303.6196657,
+        "release_history_declared_source": "guard_submission_after",
+        "release_confirmed_on_capture_clock": true,
+        "effective_delay_seconds": 0.125,
+        "actual_console_receipt_confirmed": false
+      },
+      "obstacle_shapes": [
+        {
+          "track_id": 22,
+          "shape": "circle",
+          "center_x_pixels": 421.20001220703125,
+          "center_y_pixels": 368.4000244140625,
+          "radius_pixels": 25.84000015258789,
+          "coordinate_space": "canonical_640x480_pixels",
+          "source": "current_bright_ring",
+          "rim_sectors": 12,
+          "rim_contrast": 45.05309600699882,
+          "timestamp": 2259303.7691738,
+          "association": "unique_current_obstacle",
+          "confidence_kind": "visual_rim_evidence_not_measured_collision_box"
+        }
+      ],
+      "buff_active": false,
+      "collision_suspected": false,
+      "hit_body_detected": false,
+      "player_appearance": "blue",
+      "motion_mode": "normal"
+    }
+  },
+  "parameters": {
+    "maximum_axis": 0.65,
+    "wall_margin": 0.012,
+    "position_uncertainty": 0.006,
+    "lookahead_depth": 0.68,
+    "maximum_steps": 30,
+    "beam_width": 12,
+    "step_seconds": 0.1,
+    "allow_hit_recovery": true,
+    "allow_contact_mitigation": true,
+    "star_reward": 0.04,
+    "prediction_timing": "capture_clock",
+    "effective_delay_seconds": 0.125,
+    "dispatch_delay_seconds": 0.03,
+    "current_forward_speed_hypothesis": 0.5,
+    "maximum_observation_age_seconds": 0.2,
+    "motion_models": {
+      "normal": {
+        "forward_speed": 0.25,
+        "input_gain_per_second": 2.6498880173025037,
+        "drag_per_second": 8.3782059908189,
+        "neutral_velocity": -0.0006300090961476031,
+        "maximum_lateral_speed": 0.4
+      },
+      "zr": {
+        "forward_speed": 0.5,
+        "input_gain_per_second": 3.1769860154522482,
+        "drag_per_second": 22.14041097819198,
+        "neutral_velocity": 0.0008168362831264614,
+        "maximum_lateral_speed": 0.25
+      }
+    },
+    "steering_change_weight": 0.003,
+    "mixed_zr_prefix_seconds": [
+      0.2
+    ],
+    "route_continuity_weight": 0,
+    "prefix_forward_from_input_history": true,
+    "allow_full_axis_with_clearance": true,
+    "full_axis_minimum_clearance": 0.02,
+    "compare_star_modes": true,
+    "star_mode_gain_margin_seconds": 0.25,
+    "planning_delay_budget_enabled": true,
+    "star_mode_upper_bound_pruning": true,
+    "forward_dynamics": {
+      "enabled": true,
+      "zr_acceleration": 0.1155274902,
+      "normal_speed": 0.25,
+      "normal_tau_seconds": 0.7,
+      "maximum_seed_age_seconds": 1.5,
+      "experimental": true,
+      "fit_source": "artifacts/mining-A-campaign/vision-review/strict-vertical-segments.json",
+      "scope": "short-window free-flight; normal/ZR only; no powered/collision/terminal-speed calibration"
+    },
+    "mixed_deadline_guard": true
+  }
+}

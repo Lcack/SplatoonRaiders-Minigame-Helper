@@ -36,6 +36,9 @@ def load_profile(path, game):
 
 
 def create_recognizer(game, profile=None):
+    if profile and profile.get("vision_backend") == "mining_live":
+        from .mining_vision import MiningLiveRecognizer
+        return MiningLiveRecognizer(game, profile)
     if profile and profile.get("vision_backend") == "arcade_fast":
         from .arcade_vision import FastArcadeRecognizer
         return FastArcadeRecognizer(game, profile)

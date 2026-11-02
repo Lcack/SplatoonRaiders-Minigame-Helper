@@ -1,0 +1,64 @@
+{
+  "maximum_axis": 0.85,
+  "wall_margin": 0.012,
+  "position_uncertainty": 0.006,
+  "lookahead_depth": 0.68,
+  "maximum_steps": 30,
+  "beam_width": 12,
+  "step_seconds": 0.1,
+  "allow_hit_recovery": true,
+  "allow_contact_mitigation": true,
+  "star_reward": 0.04,
+  "prediction_timing": "capture_clock",
+  "effective_delay_seconds": 0.125,
+  "dispatch_delay_seconds": 0.03,
+  "current_forward_speed_hypothesis": 0.5,
+  "maximum_observation_age_seconds": 0.2,
+  "motion_models": {
+    "normal": {
+      "forward_speed": 0.25,
+      "input_gain_per_second": 2.6498880173025037,
+      "drag_per_second": 8.3782059908189,
+      "neutral_velocity": -0.0006300090961476031,
+      "maximum_lateral_speed": 0.4
+    },
+    "zr": {
+      "forward_speed": 0.5,
+      "input_gain_per_second": 3.1769860154522482,
+      "drag_per_second": 22.14041097819198,
+      "neutral_velocity": 0.0008168362831264614,
+      "maximum_lateral_speed": 0.25
+    }
+  },
+  "steering_change_weight": 0.003,
+  "mixed_zr_prefix_seconds": [
+    0.2
+  ],
+  "route_continuity_weight": 0,
+  "prefix_forward_from_input_history": true,
+  "allow_full_axis_with_clearance": true,
+  "full_axis_minimum_clearance": 0.02,
+  "compare_star_modes": true,
+  "star_mode_gain_margin_seconds": 0.25,
+  "planning_delay_budget_enabled": true,
+  "star_mode_upper_bound_pruning": true,
+  "forward_dynamics": {
+    "enabled": true,
+    "zr_acceleration": 0.1155274902,
+    "normal_speed": 0.25,
+    "normal_tau_seconds": 0.7,
+    "maximum_seed_age_seconds": 1.5,
+    "experimental": true,
+    "fit_source": "artifacts/mining-A-campaign/vision-review/strict-vertical-segments.json",
+    "scope": "short-window free-flight; normal/ZR only; no powered/collision/terminal-speed calibration"
+  },
+  "mixed_deadline_guard": true,
+  "circle_collision": {
+    "enabled": true,
+    "extra_radius_pixels": 0
+  },
+  "circle_guided_search": true,
+  "straightness_clear_only": true,
+  "center_attraction_weight": 0.05,
+  "lateral_travel_weight": 0.04
+}

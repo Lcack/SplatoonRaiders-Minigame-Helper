@@ -1,86 +1,90 @@
 # Splatoon Raiders Minigame Helper
 
-通过采集卡获取画面，通过旧项目的 EasyCon 控制器向主机发送按键。现已加入 HOPPING、JUGGLING、LANDING 的参考视频识别、轨迹分析与操作建议；**尚未完成实机自动通关或刷分验证**。
+面向四项小游戏的采集、视觉识别、策略计算与 EasyCon 控制助手。当前 MINING 和 JUGGLING 已接入 Nintendo Switch 实机闭环，HOPPING、LANDING 保留独立的识别、预测与回放分析能力。
+
+**2026-11-03 进度：**JUGGLING 最近三批共 9 局自主运行的原始结算图均已核对为 A 级，第五批为 **8400/A、9810/A、12435/A**。这组记录累计 34125 次观测；每局保留加载版本、参数、轨迹和实际输入证据。查看[实机结果索引](docs/evidence/juggling-20261103/summary.json)和[当前实现说明](docs/JUGGLING_LIVE.md)。
 
 ## 启动
 
-优先使用当前 conda base 环境。在项目目录运行：
+在 Windows 项目目录优先使用已有的 conda base 环境：
 
 ```powershell
-python run.py gui
+# JUGGLING 自主运行，默认三局，每局重新加载 AI
+.\start_juggling_hot.cmd
+
+# MINING 自主运行与局间更新
+.\start_mining_hot.cmd
+
+# 打开统一图形任务终端
+.\start_live.cmd
 ```
 
-也可以双击 `start.cmd`。选择小游戏、保留“合成演示”，点击“启动观察”，可查看检测框、运动跟踪、策略建议与日志。合成演示使用几何色块，**不是实机识别成果，也不是准确的游戏物理模拟器**。
+JUGGLING 可使用 `start_juggling_hot.cmd --rounds 6` 指定轮数，或 `--rounds 0` 持续 Retry。入口可复用已连接的终端，也可打开新终端；先通过画面确认小游戏选择页或结算页，再闭环定位并进入游戏。默认不录制整段视频。终端持续持有采集卡与 EasyCon，AI 按局使用独立进程。
 
-当前检查环境：Python、NumPy、OpenCV、Pillow、Tkinter、pytest 已可导入；pyserial 未安装。只有连接 EasyCon 才需要它：
+通用观察界面与手柄调试入口：
 
 ```powershell
-python -m pip install pyserial
+python run.py task-terminal
+python run.py gui
 python run.py controller-debug
 ```
 
-直接分析已下载的参考实况，查看检测框、黄色目标点与操作建议：
+需要相应的 EasyCon ESP32-S3 硬件及固件。项目使用串口方案发送完整按钮、方向帽和双摇杆状态；默认采集设备为 0、串口为 COM5，可在终端修改。基础依赖见 `pyproject.toml`，连接控制器需安装 `pyserial`，研究拟合工具另使用 `scipy`。
 
-```powershell
-python run.py gui --game juggling --video artifacts/reference_videos/utagaming-l3dMQV1sar8/reference.mp4
-```
+## 当前实现
 
-小游戏可改成 `hopping` 或 `landing`。该参考文件自动跳到所选游戏章节，界面可暂停、单帧、按秒定位。视频始终只输出建议。逐帧导出、中文标注视频和实际耗时见 [视频分析说明](docs/VIDEO_ANALYSIS.md)。
+| 模块 | 当前能力 |
+|---|---|
+| 采集与终端 | DSHOW / MSMF / ANY、最新帧共享、图形任务设置、预览、人工调试、运行日志 |
+| 控制与记录 | EasyCon / Dummy、双摇杆及组合键、输入租约与归中、实际发送前后时刻、阶段门控录像 |
+| MINING | 自适应道路内边缘、机体与石头亮环识别、滚屏与速度种子、分模式积分、在线束搜索、混合 ZR 截止守卫、每局独立工作进程 |
+| JUGGLING | 双角色识别、旋转鱼补检、多球身份关联、逐球二次短窗、反弹与接触预测、双侧任务分配、实际输入历史余程投影、空闲回中、生命和 Fever 观察、结算读分及局间更新 |
+| HOPPING | 接球优先、目标与敌人跟踪、接触预测、强化外观、局部避敌与收益调度 |
+| LANDING | 十布局图库、地形匹配、姿态模板、几何路径、喷射和制动建议 |
+| 回放分析 | 视频播放、暂停与单帧、中文标注、JSONL、采集时钟与输入历史关联 |
 
-这是原项目的 EasyCon ESP32-S3 串口方案，仍需要相应硬件和固件。窗口中的“虚拟手柄”是发送控制器状态的界面；本项目没有实现仅靠 Windows 虚拟手柄直接连接 Switch 的新协议。协议实现来源见 [移植说明](docs/PROVENANCE.md)。
+JUGGLING 当前自主配置以接球为优先任务，分别控制左右摇杆。得分星使用独立目标类型，Fever 由量表及其消退过程维护。滑行探针、实机脉冲分析与经验位移拟合另行保存，当前自主配置采用双摇杆接球。
 
-## 当前能力
-
-| 模块 | 已实现 | 尚待完成 |
-|---|---|---|
-| 控制 | EasyCon / Dummy、双摇杆、按键组合、手柄调试面板、输入超时归中 | 当前主机与固件的实测 |
-| 采集 | DSHOW / MSMF / ANY、采集与分析各自后台运行、只处理最新帧、截图及观察帧录像 | 当前采集卡延迟与最佳模式测量 |
-| 回放 | 视频播放、暂停、单帧、按秒定位、CLI 抽帧、JSONL | 标注集与误差评估 |
-| 识别 | 通用模板/HSV/数字槽配置器；另三项参考视频的快速颜色形状识别、全局轨迹匹配、反弹后重估速度 | 多视频标注集与准确率；实机采集校准；三项快速配置尚无数字读数 |
-| MINING | 默认基线；可选多步规划、弯道路线、整组加时比较、连续碰撞检查及模型内评估 | 可靠实机识别、运动/强化模型标定、闭环得分验证 |
-| HOPPING | 接球优先；金色锅盖/落卵模板、强化外观候选；局部避敌、可达收益与返程检查、B 键时窗建议 | 重叠与动画漏检；重力、横移、顶球、强化剩余时长的实测；强化收益闭环 |
-| JUGGLING | 多球预测、边界反弹、按接触时间与半场调度双摇杆；滑步参数门槛 | 不同鱼的动画/碰撞特性；滑步距离、反应延迟的实测；多球实机成功率 |
-| LANDING | 单局十布局图库、几何路线、姿态模板、角速度平滑、左右/双喷射及制动建议 | 未见布局、动态障碍识别；风/推力/惯性校准；落地闭环 |
-
-## 流程
+## 控制流程
 
 ```mermaid
 flowchart LR
-    A[采集卡 / 视频 / 合成帧] --> B[裁剪游戏区与缩放]
-    B --> C[阶段 / 目标 / HUD识别]
-    C --> D[目标跟踪与速度估计]
-    D --> E[四游戏独立策略]
-    E --> F[观察面板与JSONL]
-    E --> G[实机控制开关与超时归中]
-    G --> H[EasyCon串口]
-    H --> I[主机游戏画面]
-    I --> A
+    A[采集卡与任务终端] --> B[当前画面与游戏阶段]
+    B --> C[机体 多球 道路或目标]
+    C --> D[运动估计与输入历史]
+    D --> E[小游戏独立策略]
+    E --> F[输入守卫与租约]
+    F --> G[共享接口与 EasyCon]
+    G --> H[实机后续画面]
+    H --> A
+    E --> I[观测 建议 执行与版本日志]
 ```
 
-默认只观察。只有实时采集、配置明确标记 `calibrated: true`、没有 `advisory_only` 限制、连接 EasyCon 并点击“启用实机控制”后才会发送策略输入。三份参考视频配置均为 `advisory_only: true`，不能直接启用实机控制。未知阶段、缺目标、过期帧时输出中立状态；软件看门狗在输入租约到期时尝试归中。串口拔除、进程强杀等情况无法靠本进程保证主机收到归中指令。
+`start_mining_hot.cmd`、`start_juggling_hot.cmd` 使用独立监督工作进程。普通 Engine 的控制许可检查仍由 `calibrated`、`advisory_only` 等配置决定，两种运行入口分别管理；参考视频与合成演示只产生建议。
 
-控制链路目前由人手动进入小游戏；菜单进入、开始游戏、结算重试尚未实现。检测匹配得分是算法分数，不能解释为真实正确率。
+每局记录源码摘要、配置摘要和实际加载版本。源代码或参数修改在下一局重新导入；GUI 与控制层修改需重开终端。结算等级由结果画面读取，数字分数另用五位字形库核对。JUGGLING 的停止目标可配置，默认目标为结果页 S。
 
-## 命令
+## 验证与资料
+
+2026-11-03 的 JUGGLING 定向回归为 **76 项通过**；项目不依赖 Tk 图形窗口的回归范围为 **1023 项通过**，排除了 `test_task_terminal_gui.py` 和 `test_live_debug_ui.py`。范围与耗时保存在[验证索引](docs/evidence/juggling-20261103/summary.json)。
+
+- [项目实现说明书](docs/reports/SplatoonRaiders-Minigame-Helper_项目实现说明书.docx)
+- [JUGGLING 实机实现与批次记录](docs/JUGGLING_LIVE.md)
+- [图形任务终端与实机实验](docs/LIVE_EXPERIMENT.md)
+- [MINING 纵向响应与模式实现](docs/MINING_FORWARD_EXPERIMENT.md)
+- [视频分析](docs/VIDEO_ANALYSIS.md)
+- [原项目协议移植与来源](docs/PROVENANCE.md)
+
+完整实机采样、录像与临时实验保存在本地 `artifacts/`。仓库保存运行代码、配置、模板、测试、报告和精选原始结算图，结果图片在索引中附有 SHA-256。
+
+## 其他命令
 
 ```powershell
 python run.py demo --game mining --frames 120
-python run.py demo --game hopping --output artifacts/hopping.jsonl
-python run.py demo --game juggling --output artifacts/juggling.jsonl
-python run.py demo --game landing --output artifacts/landing.jsonl
 python run.py mining-evaluate
-python run.py analyze-video artifacts/reference_videos/utagaming-l3dMQV1sar8/reference.mp4 --game hopping --start 382 --end 388 --annotated --output artifacts/my_hopping_analysis
-python tools/analyze_reference.py
 python run.py ports
-python run.py replay "D:\videos\sample.mp4" --game mining --profile profiles/mining.json
-python run.py extract "D:\videos\sample.mp4" --start 10 --end 20 --step 0.1
+python run.py analyze-video <本地视频路径> --game juggling --start 720 --end 726 --annotated --output artifacts/my_juggling_analysis
 python -m pytest -q
 ```
 
-`replay` 不提供 profile 时只验证视频管线，识别结果为 unknown；`analyze-video` 与 GUI 的视频模式会默认加载所选游戏的 profile。MINING 仍需补齐通用识别配置；另外三份 profile 使用 `arcade_fast`，其 `detectors` 为空表示不使用通用检测器，颜色、形状和参考模板由快速识别器处理。固定裁剪与阈值仅面向当前参考视频，采集卡画面需另行校准。
-
-GUI 的录像按观察循环取得的帧写入，视频容器使用固定帧率，不能单靠它测量硬件时延。`trace.jsonl` 保留逐帧源时间戳；离线视频用帧索引/FPS，实机用读取完成时的单调时钟。后者不包含已知的 HDMI/采集卡内部延迟。
-
-公开实况的来源、直接观察记录和用户补充规则在 [调查记录](docs/RESEARCH.md)。当前采用的 MINING 规则见 [规则基线](docs/MINING_RULES.md)，新增的日文专门 Wiki 与来源比较见 [日文资料调查](docs/JAPANESE_SOURCES.md)。核心 AI 的模型、启用条件与评估见 [MINING 规划器](docs/MINING_AI.md)；已下载的 1080p60 完整参考实况见 [本地视频与章节](docs/LOCAL_VIDEO.md)。识别配置及开发顺序见 [校准说明](docs/CALIBRATION.md)。原项目未被修改，本项目不依赖原项目目录才能运行。
-
-声明分类：软件能力为客观事实，以源码与测试为依据，置信度高（≥80%）；策略效果与后续实现路线为逻辑推断，置信度中（50–80%）。未测量的物理参数不作为事实填入配置。
+`gui` 的合成演示用于检查管线和策略表达，视频分析用于离线观察。参考视频及原始来源见[本地视频与章节](docs/LOCAL_VIDEO.md)、[调查记录](docs/RESEARCH.md)和[日文资料调查](docs/JAPANESE_SOURCES.md)。

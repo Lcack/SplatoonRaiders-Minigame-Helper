@@ -1,0 +1,22 @@
+{
+  "calibrated": false,
+  "split_x": 0.5,
+  "latency_seconds": 0.125,
+  "deadband": 0.009,
+  "deadband_left": 0.023,
+  "deadband_right": 0.014,
+  "steering_gain": 10.0,
+  "use_track_flight_models": true,
+  "input_response_model": {"enabled": true, "delay_seconds": 0.12, "dispatch_budget_seconds": 0.015,
+    "gain_left": 0.666, "gain_right": 0.660, "scope": "short anchored free-motion fit, not full calibration"},
+  "prediction_horizon_seconds": 2.5,
+  "fallback_prediction_horizon_seconds": 0.95,
+  "gravity_estimate": 0.9,
+  "velocity_smoothing_lag_seconds": 0.06,
+  "use_actual_velocity_window": true,
+  "idle_centering": {"enabled": true, "gain": 6.0, "deadband": 0.012, "maximum_axis": 0.6, "delay_seconds": 0.3},
+  "slide": {
+    "enabled": false
+  },
+  "notes": "Experimental: per-track accepted fits first; fallback gravity .9 and velocity lag .06 are bounded priors compared on frozen actual traces, not full calibration. Actual input-history prefix uses short anchored motion fit."
+}

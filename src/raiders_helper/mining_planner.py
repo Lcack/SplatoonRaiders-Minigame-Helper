@@ -85,7 +85,18 @@ class Road:
         rows = {}
         for e in corridors:
             rows.setdefault(round(e.y, 5), []).append((e.x - e.w / 2, e.x + e.w / 2))
-        self.rows = [(y, sorted(intervals)) for y, intervals in sorted(rows.items())]
+        self.rows = []
+        for y, intervals in sorted(rows.items()):
+            merged=[]
+            for left,right in sorted(intervals):
+                # A fixed scanline and a body-edge scanline may describe the
+                # same floor at the same y. Duplicate/overlapping intervals
+                # are one connected region, not a topology split. Do not
+                # bridge even a small observed gap between distinct regions.
+                if merged and left <= merged[-1][1]:
+                    merged[-1]=(merged[-1][0],max(merged[-1][1],right))
+                else:merged.append((left,right))
+            self.rows.append((y,merged))
 
     @lru_cache(maxsize=4096)
     def intervals(self, y):

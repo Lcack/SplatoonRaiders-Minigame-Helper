@@ -23,8 +23,32 @@ def main(argv=None):
     gui=sub.add_parser("gui", help="中文调试界面")
     gui.add_argument("--game",choices=[g.value for g in Game])
     gui.add_argument("--video",type=Path)
+    terminal=sub.add_parser("task-terminal",help="图形实机任务终端：预览、游戏选择、Retry标定与助手接口")
+    terminal.add_argument("--game",choices=[g.value for g in Game])
+    terminal.add_argument("--profile",type=Path,help="任务终端显示及识别使用的游戏配置")
+    terminal.add_argument("--auto-start",action="store_true",help="打开任务终端后连接采集预览与助手接口；由独立AI程序接管")
+    terminal.add_argument("--rounds",type=int,default=3,help="任务界面默认运行轮数；0持续")
+    terminal.add_argument("--no-record",action="store_true",help="本次图形调试默认不录像，按键日志仍保存")
     sub.add_parser("controller-debug", help="移植的 EasyCon / Dummy 手柄面板")
     sub.add_parser("ports", help="列出 EasyCon 串口")
+    live = sub.add_parser("live", help="终端选择小游戏，观察或执行菜单→单局→返回选择页")
+    live.add_argument("--game", choices=[g.value for g in Game])
+    live.add_argument("--session", type=Path, default=Path("profiles/session.json"))
+    live.add_argument("--profile", type=Path)
+    live.add_argument("--device", type=int, default=0)
+    live.add_argument("--backend", choices=["DSHOW", "MSMF", "ANY"], default="DSHOW")
+    live.add_argument("--width", type=int, default=1920)
+    live.add_argument("--height", type=int, default=1080)
+    live.add_argument("--fps", type=float, default=60)
+    live.add_argument("--port")
+    live.add_argument("--mode", choices=["manual", "menu", "single", "calibrate"], default="manual")
+    live.add_argument("--control", action="store_true", help="显式发送控制；要求独立校准的配置")
+    live.add_argument("--seconds", type=float, default=0, help="本次测试时限；0不设总时限，仍有阶段超时")
+    live.add_argument("--output", type=Path)
+    live.add_argument("--rounds", type=int, default=3, help="标定采样轮数；0持续Retry直至验证门槛通过或手动停止")
+    live.add_argument("--no-record", action="store_true", help="关闭原始画面录像；控制与分析日志仍保留")
+    live.add_argument("--no-debug", action="store_true", help="关闭本机调试接口")
+    live.add_argument("--debug-port", type=int, default=0, help="0自动分配本机调试端口")
     evaluation = sub.add_parser("mining-evaluate", help="MINING 核心规划器的合成模型评估，不连接硬件")
     evaluation.add_argument("--output", type=Path, default=Path("artifacts/mining_evaluation.json"))
     analysis = sub.add_parser("analyze-video", help="三项小游戏逐帧分析、建议与分项耗时（仅离线）")
@@ -54,6 +78,14 @@ def main(argv=None):
     extract.add_argument("--output", type=Path, default=Path("artifacts/frames"))
     args = parser.parse_args(argv)
     try:
+        if args.command == "task-terminal":
+            from .gui import run_gui
+            return run_gui(args.game,task_terminal=True,auto_start=args.auto_start,record=not args.no_record,profile=args.profile,rounds=args.rounds)
+        if args.command == "live":
+            if args.width <= 0 or args.height <= 0 or args.fps <= 0 or args.seconds < 0 or args.rounds < 0:
+                raise ValueError("采集尺寸/FPS需为正，时限需非负")
+            from .session_runtime import run_session
+            return run_session(args)
         if args.command == "gui":
             from .gui import run_gui
             return run_gui(args.game,args.video)

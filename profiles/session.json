@@ -1,0 +1,468 @@
+{
+  "version": 1,
+  "viewport": [
+    0.16666666666666666,
+    0.05092592592592592,
+    0.6666666666666666,
+    0.8888888888888888
+  ],
+  "reference_size": [
+    640,
+    480
+  ],
+  "stable_frames": 3,
+  "screens": [
+    {
+      "name": "menu:mining",
+      "all_of": [
+        {
+          "path": "../assets/session/cursor.png",
+          "roi": [
+            0.046875,
+            0.31875,
+            0.08125,
+            0.10416666666666667
+          ],
+          "threshold": 0.88
+        },
+        {
+          "path": "../assets/session/label-mining.png",
+          "roi": [
+            0.1171875,
+            0.33125,
+            0.28125,
+            0.07916666666666666
+          ],
+          "threshold": 0.9
+        }
+      ],
+      "observed_selected": true,
+      "note": "已见真实选中状态。"
+    },
+    {
+      "name": "menu:hopping",
+      "all_of": [
+        {
+          "path": "../assets/session/cursor.png",
+          "roi": [
+            0.046875,
+            0.4125,
+            0.08125,
+            0.10416666666666667
+          ],
+          "threshold": 0.88
+        },
+        {
+          "path": "../assets/session/label-hopping.png",
+          "roi": [
+            0.1171875,
+            0.425,
+            0.28125,
+            0.07916666666666666
+          ],
+          "threshold": 0.9
+        }
+      ],
+      "observed_selected": true,
+      "note": "已见真实选中状态。"
+    },
+    {
+      "name": "menu:juggling",
+      "all_of": [
+        {
+          "path": "../assets/session/cursor.png",
+          "roi": [
+            0.046875,
+            0.50625,
+            0.08125,
+            0.10416666666666667
+          ],
+          "threshold": 0.88
+        },
+        {
+          "path": "../assets/session/label-juggling.png",
+          "roi": [
+            0.1171875,
+            0.51875,
+            0.28125,
+            0.07916666666666666
+          ],
+          "threshold": 0.9
+        }
+      ],
+      "observed_selected": false,
+      "note": "未见选中JUGGLING/LANDING的真实帧，光标同型及上下行位置复用是待实机检验的工程推断。"
+    },
+    {
+      "name": "menu:landing",
+      "all_of": [
+        {
+          "path": "../assets/session/cursor.png",
+          "roi": [
+            0.046875,
+            0.6,
+            0.08125,
+            0.10416666666666667
+          ],
+          "threshold": 0.88
+        },
+        {
+          "path": "../assets/session/label-landing.png",
+          "roi": [
+            0.1171875,
+            0.6125,
+            0.28125,
+            0.07916666666666666
+          ],
+          "threshold": 0.9
+        }
+      ],
+      "observed_selected": false,
+      "note": "未见选中JUGGLING/LANDING的真实帧，光标同型及上下行位置复用是待实机检验的工程推断。"
+    },
+    {
+      "name": "countdown:mining",
+      "all_of": [
+        {
+          "any_of": [
+            {
+              "path": "../assets/session/countdown-3.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-2.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-1.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            }
+          ]
+        },
+        {
+          "path": "../assets/session/initial-mining.png",
+          "roi": [
+            0.0,
+            0.0,
+            0.3203125,
+            0.075
+          ],
+          "threshold": 0.88
+        }
+      ],
+      "note": "倒数数字加本游戏参考开局签名。不是游戏名标题，也不是通用运行阶段识别。"
+    },
+    {
+      "name": "countdown:hopping",
+      "all_of": [
+        {
+          "any_of": [
+            {
+              "path": "../assets/session/countdown-3.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-2.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-1.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            }
+          ]
+        },
+        {
+          "path": "../assets/session/initial-hopping.png",
+          "roi": [
+            0.140625,
+            0.93125,
+            0.71875,
+            0.06875
+          ],
+          "threshold": 0.88
+        }
+      ],
+      "note": "倒数数字加本游戏参考开局签名。不是游戏名标题，也不是通用运行阶段识别。"
+    },
+    {
+      "name": "countdown:juggling",
+      "all_of": [
+        {
+          "any_of": [
+            {
+              "path": "../assets/session/countdown-3.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-2.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-1.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            }
+          ]
+        },
+        {
+          "path": "../assets/session/initial-juggling.png",
+          "roi": [
+            0.375,
+            0.0,
+            0.190625,
+            0.07083333333333333
+          ],
+          "threshold": 0.88
+        }
+      ],
+      "note": "倒数数字加本游戏参考开局签名。不是游戏名标题，也不是通用运行阶段识别。"
+    },
+    {
+      "name": "countdown:landing",
+      "all_of": [
+        {
+          "any_of": [
+            {
+              "path": "../assets/session/countdown-3.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-2.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            },
+            {
+              "path": "../assets/session/countdown-1.png",
+              "roi": [
+                0.3953125,
+                0.25833333333333336,
+                0.315625,
+                0.4895833333333333
+              ],
+              "threshold": 0.88
+            }
+          ]
+        },
+        {
+          "path": "../assets/session/initial-landing.png",
+          "roi": [
+            0.0,
+            0.93125,
+            0.3984375,
+            0.06875
+          ],
+          "threshold": 0.88
+        }
+      ],
+      "note": "倒数数字加本游戏参考开局签名。不是游戏名标题，也不是通用运行阶段识别。"
+    },
+    {
+      "name": "result:retry",
+      "all_of": [
+        {
+          "path": "../assets/session/result-cursor.png",
+          "roi": [
+            0.33125,
+            0.5,
+            0.08125,
+            0.10416666666666667
+          ],
+          "threshold": 0.88
+        },
+        {
+          "path": "../assets/session/result-retry.png",
+          "roi": [
+            0.40625,
+            0.5083333333333333,
+            0.1953125,
+            0.08958333333333333
+          ],
+          "threshold": 0.9
+        },
+        {
+          "path": "../assets/session/result-rank.png",
+          "roi": [
+            0.2890625,
+            0.4125,
+            0.1765625,
+            0.08541666666666667
+          ],
+          "threshold": 0.9
+        }
+      ],
+      "observed_selected": true
+    },
+    {
+      "name": "result:quit",
+      "all_of": [
+        {
+          "path": "../assets/session/result-cursor.png",
+          "roi": [
+            0.33125,
+            0.575,
+            0.08125,
+            0.10416666666666667
+          ],
+          "threshold": 0.88
+        },
+        {
+          "path": "../assets/session/result-quit.png",
+          "roi": [
+            0.40625,
+            0.5833333333333334,
+            0.1671875,
+            0.08958333333333333
+          ],
+          "threshold": 0.9
+        },
+        {
+          "path": "../assets/session/result-rank.png",
+          "roi": [
+            0.2890625,
+            0.4125,
+            0.1765625,
+            0.08541666666666667
+          ],
+          "threshold": 0.9
+        }
+      ],
+      "observed_selected": true
+    }
+  ],
+  "note": "阈值为待实机标定的工程起点，不代表已测正确率；所有模板路径相对assets/session。",
+  "calibrated": false,
+  "flow": {
+    "hold_seconds": 0.08,
+    "gap_seconds": 0.25,
+    "screen_settle_seconds": 0.05,
+    "step_timeout_seconds": 15,
+    "unknown_timeout_seconds": 10,
+    "max_play_seconds": 1800,
+    "max_attempts": 3,
+    "buttons": {
+      "select": [
+        "A"
+      ],
+      "result_choose_quit": [
+        "DPAD_DOWN"
+      ],
+      "result_confirm_quit": [
+        "A"
+      ],
+      "result_choose_retry": [
+        "DPAD_UP"
+      ],
+      "result_confirm_retry": [
+        "A"
+      ]
+    }
+  },
+  "calibration": {
+    "enabled": false,
+    "pulse_seconds": 0.18,
+    "neutral_seconds": 0.3,
+    "levels": [
+      0.35,
+      0.65
+    ],
+    "min_confidence": 0.85,
+    "min_track_samples": 3,
+    "position_margin": 0.04,
+    "enable_jump": false,
+    "enable_jets": false,
+    "fit": {
+      "delay_grid_seconds": [
+        0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05,
+        0.06666666666666667,
+        0.08333333333333333,
+        0.1,
+        0.13333333333333333,
+        0.16666666666666666,
+        0.2
+      ],
+      "min_samples": 80,
+      "min_rounds": 3,
+      "min_span_seconds": 5,
+      "min_axis_coverage": 0.25,
+      "min_input_transitions": 6,
+      "max_gap_seconds": 0.05,
+      "max_sequence_gap": 1,
+      "min_position_span": 0.03,
+      "min_response_gain_per_second": 0.01,
+      "max_holdout_rmse": 0.08,
+      "max_normalized_holdout_rmse": 0.3
+    }
+  },
+  "notes": [
+    "仅参考图像起点，实际采集卡、菜单确认键和脉冲时长尚未校准。",
+    "manual模式不自动选游戏；menu模式仅移动到目标选项。",
+    "calibrate模式只发独立探针，结果页Retry采样，未测参数不能视为已验证。"
+  ]
+}

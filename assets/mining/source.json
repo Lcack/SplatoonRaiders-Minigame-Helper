@@ -1,0 +1,223 @@
+{
+  "source": "real_NS_capture",
+  "source_file": "artifacts\\mining-supervision\\live-round01.png",
+  "canonical_crop_xywh": [
+    320,
+    55,
+    1280,
+    960
+  ],
+  "canonical_size": [
+    640,
+    480
+  ],
+  "scope": "mining_TIME00.0_visual_end_marker_not_generic_OCR",
+  "legacy_timer_zero_roi": [
+    98,
+    2,
+    90,
+    26
+  ],
+  "strict_timer_zero_roi": [
+    96,
+    1,
+    94,
+    29
+  ],
+  "strict_timer_search_roi": [
+    92,
+    0,
+    104,
+    33
+  ],
+  "strict_mask": "((H<=4 or H>=176) and S>=180 and V>=100) or (S<=60 and V>=180)",
+  "strict_threshold_starting_value": 0.9,
+  "strict_timer_templates": [
+    {
+      "template": "time-zero-strict-0.png",
+      "source_file": "artifacts/mining-supervision/live-round01.png",
+      "source": "real_NS_capture",
+      "sha256": "763f81c28d9d22efeddf5b61d4279c69bfd2b0ad8e04985207bbbc1bf0405b73",
+      "roi_xywh": [
+        96,
+        1,
+        94,
+        29
+      ],
+      "note": "Two observed CRT color phases of TIME00.0; not general OCR or a measured accuracy claim."
+    },
+    {
+      "template": "time-zero-strict-1.png",
+      "source_file": "artifacts/mining-supervision/round-02/last-frame.png",
+      "source": "real_NS_capture",
+      "sha256": "50b5ceb66047a64256a1671ad09a1af9f1b6cd50f739e84885e182d30431178f",
+      "roi_xywh": [
+        96,
+        1,
+        94,
+        29
+      ],
+      "note": "Two observed CRT color phases of TIME00.0; not general OCR or a measured accuracy claim."
+    }
+  ],
+  "timer_digit_templates": [
+    {
+      "digit": 0,
+      "template": "timer-digit-0.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012591.jpg",
+      "canonical_roi_xywh": [
+        102,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "6f4eeec00957804b22c472a0a81a14fa112f1ab6a2dfd419e084e47395b3880b"
+    },
+    {
+      "digit": 1,
+      "template": "timer-digit-1.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00013026.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "5f9f1d3beb395b61f935416ad6cb68a8b77317ed4193d913114b0dfa979bcfc0"
+    },
+    {
+      "digit": 2,
+      "template": "timer-digit-2.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012965.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "09dd2e9365c6af110a66634dcf857ce3d9c84828d52cfc37154867504b359edc"
+    },
+    {
+      "digit": 3,
+      "template": "timer-digit-3.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012901.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "93ccea19feae551ae82af5327e3000e328b0bd26c3dd215dfd71f05a0f947251"
+    },
+    {
+      "digit": 4,
+      "template": "timer-digit-4.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012841.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "0504fdc38da5aa3d09824ee5774f7a21a7585a371c10713a191e35471f06f718"
+    },
+    {
+      "digit": 5,
+      "template": "timer-digit-5.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012778.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "b270fc5afa614069e683f2c32792d227349a0ef7ce67fc0ecce17f02a1681349"
+    },
+    {
+      "digit": 6,
+      "template": "timer-digit-6.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012591.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "d89efd8e25cbcb669cbe1d24c8903ce8968532d99b6540920e6ecfdc8a3d3ede"
+    },
+    {
+      "digit": 7,
+      "template": "timer-digit-7.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012529.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "e1db373728fa32247d0bcf8961aa4adf55583a147a224a15ab349d121407c7ac"
+    },
+    {
+      "digit": 8,
+      "template": "timer-digit-8.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012468.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "f87519a7b9ceaaaf05bc52f1955d3b163d385932573a7b63afe13cd1bd5497cd"
+    },
+    {
+      "digit": 9,
+      "template": "timer-digit-9.png",
+      "source_file": "artifacts/mining-supervision/round-04/frame-00012405.jpg",
+      "canonical_roi_xywh": [
+        122,
+        4,
+        20,
+        25
+      ],
+      "annotation": "Manually read from real NS screenshot; timing font sample, no OCR accuracy claim.",
+      "sha256": "d371b371b6785a3681c7102d15e9a5e882713b9ce9e0f808e15a86375917f16d"
+    }
+  ],
+  "timer_digit_validation": {
+    "digit_cells_xywh": [
+      [
+        102,
+        4,
+        20,
+        25
+      ],
+      [
+        122,
+        4,
+        20,
+        25
+      ],
+      [
+        162,
+        4,
+        20,
+        25
+      ]
+    ],
+    "search_padding_pixels": 2,
+    "purpose": "Each digit must prefer zero over observed digits 1..9; prevents TIME06.0 matching whole TIME00.0 marker.",
+    "zero_digit_min_score": 0.8,
+    "zero_vs_nonzero_min_margin": 0.08,
+    "whole_timer_min_ncc": 0.9,
+    "scope": "Conjunctive per-position verification in addition to the whole-timer candidate; independent RANK anchor can end before RETRY appears."
+  }
+}

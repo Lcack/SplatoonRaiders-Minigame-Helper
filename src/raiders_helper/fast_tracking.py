@@ -39,13 +39,17 @@ def assignment(cost):
 
 
 class PredictiveTracker:
-    def __init__(self, max_gap=0.15):
+    def __init__(self, max_gap=0.15, *, ball_area_ratio_limit=None, physical_ball_bounces=False):
         self.tracks = {}
         self.next_id = 0
         self.last_time = None
         self.max_gap = max_gap
+        self.ball_area_ratio_limit=ball_area_ratio_limit
+        self.physical_ball_bounces=physical_ball_bounces
+        self.velocity_windows={}
 
     def update(self, detections, timestamp):
+        self.velocity_windows={}
         if self.last_time is not None and not 0 < timestamp-self.last_time <= 0.25:
             self.tracks.clear()
         self.last_time = timestamp
@@ -59,7 +63,11 @@ class PredictiveTracker:
                 predicted_x, predicted_y = old.x+old.vx*dt, old.y+old.vy*dt
                 distance = math.hypot(e.x-predicted_x, e.y-predicted_y)
                 size = abs(e.w-old.w)+abs(e.h-old.h)
-                row.append(distance+0.08*size if e.kind == old.kind and distance < 0.08+0.8*dt else 1000.)
+                shape_ok=True
+                if e.kind==old.kind=='ball' and self.ball_area_ratio_limit is not None:
+                    areas=(e.w*e.h,old.w*old.h)
+                    shape_ok=min(areas)>0 and max(areas)/min(areas)<=self.ball_area_ratio_limit
+                row.append(distance+0.08*size if e.kind == old.kind and shape_ok and distance < 0.08+0.8*dt else 1000.)
             costs.append(row+[0.11]*len(detections))
         matches = dict(assignment(costs))
         result = []
@@ -73,6 +81,13 @@ class PredictiveTracker:
                 # upward and downward samples into a misleading zero velocity.
                 bounced = old.samples >= 2 and ((raw_vy*old.vy < 0 and abs(e.y-old.y) > 0.002)
                                                or (raw_vx*old.vx < 0 and abs(e.x-old.x) > 0.002))
+                if e.kind=='ball' and self.physical_ball_bounces:
+                    # Ordinary sprite rotation and the flight apex do not
+                    # create an instantaneous physical velocity reversal.
+                    bounced=old.samples>=2 and (
+                        old.vy>.2 and raw_vy<-.2 and e.y>.68 and abs(e.y-old.y)>.01
+                        or old.vx*raw_vx<0 and min(abs(old.vx),abs(raw_vx))>.2
+                           and (e.x<.12 or e.x>.88) and abs(e.x-old.x)>.008)
                 if bounced:
                     history = deque([(last, old.x, old.y)], maxlen=5)
                 history.append((timestamp, e.x, e.y))
@@ -87,6 +102,7 @@ class PredictiveTracker:
                 history = deque([(timestamp, e.x, e.y)], maxlen=5)
                 e = replace(e, track_id=track_id)
             self.tracks[track_id] = (e, timestamp, history)
+            if e.kind=='ball':self.velocity_windows[str(track_id)]=timestamp-history[0][0]
             result.append(e)
         # Missed objects are kept briefly only for association, never published
         # as if they had been detected in this frame.

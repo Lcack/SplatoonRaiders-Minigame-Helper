@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "game": "mining",
+  "calibrated": false,
+  "advisory_only": true,
+  "vision_backend": "mining_live",
+  "viewport": [
+    0.16666666666666666,
+    0.05092592592592592,
+    0.6666666666666666,
+    0.8888888888888888
+  ],
+  "reference_size": [
+    640,
+    480
+  ],
+  "stable_frames": 1,
+  "required": [
+    "player",
+    "corridor"
+  ],
+  "detectors": [],
+  "readouts": [],
+  "policy": {
+    "algorithm": "reactive_supervised"
+  },
+  "notes": "基于当前NS实机截图的MINING识别与监督避障原型。运动参数仍为待测假设，普通自动控制保持禁用；由助手监督接口验证后再决定校准范围。",
+  "floor_backend": "adaptive_inner",
+  "detect_time_stars": true,
+  "large_rocks": true,
+  "estimate_landmark_scroll": true,
+  "wake_max_body_widths": 2.5,
+  "retain_tracked_near_rocks": true,
+  "landmark_scroll_method": "paired_positions",
+  "circle_rocks": true,
+  "sparse_landmark_scroll": true,
+  "publish_obstacle_shapes": true,
+  "repair_tiny_wake_gaps": true,
+  "estimate_wall_scroll": true
+}

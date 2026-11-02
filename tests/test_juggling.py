@@ -145,3 +145,66 @@ def test_many_tracks_use_bounded_assignment_and_do_not_duplicate_targets():
     assert len(targets) == len(set(targets))
     # A deliberately loose hang/regression threshold, not an FPS guarantee.
     assert elapsed < 0.5
+
+
+def test_current_fit_improves_eta_without_relabeling_observed_positions():
+    ball=body('ball',.35,.65,track_id=1,vx=.1,vy=.3)
+    model={'accepted':True,'timestamp':1,'x':.351,'y':.651,'vx':.11,'vy':.45,'gravity':.9}
+    obs=scene(ball,metrics={'ball_flight_models':{'1':model}})
+    original=decide_juggling(obs,{})
+    fitted=decide_juggling(obs,{'use_track_flight_models':True})
+    target=fitted.diagnostics['targets']['left']
+    assert target['time_to_contact']<original.diagnostics['targets']['left']['time_to_contact']
+    assert target['ball_x']==ball.x
+    assert target['prediction_source']=='current_track_quadratic_window'
+    assert obs.of_kind('ball')[0] is ball
+
+
+@pytest.mark.parametrize('change',[{'timestamp':.9},{'x':.4},{'gravity':math.nan},{'accepted':False}])
+def test_stale_bad_or_rejected_fit_does_not_change_control(change):
+    ball=body('ball',.35,.65,track_id=1,vx=.1,vy=.3)
+    model={'accepted':True,'timestamp':1,'x':.351,'y':.651,'vx':.11,'vy':.45,'gravity':.9,**change}
+    obs=scene(ball,metrics={'ball_flight_models':{'1':model}})
+    assert decide_juggling(obs,{'use_track_flight_models':True}).state==decide_juggling(obs,{}).state
+
+
+def test_actual_pending_input_projection_replaces_old_velocity_prefix_only_when_current():
+    actor=body('player',.25,.85,vx=.6)
+    ball=body('ball',.35,.5,track_id=1,vy=.5)
+    projection={'accepted':True,'source':'backend_after_history_with_held_last_input',
+        'observation_timestamp':1,'seconds_from_observation':.16,'positions':{'left':.35,'right':.75}}
+    obs=scene(ball,left=actor,metrics={'juggling_actor_input_projection':projection})
+    p={'input_response_model':{'enabled':True},'latency_seconds':.16}
+    result=decide_juggling(obs,p)
+    assert result.state.left_stick.x==0
+    assert result.diagnostics['actor_prefix_source']=='actual_submitted_input_model'
+    assert decide_juggling(obs,{}).state.left_stick.x>0
+    stale=scene(ball,left=actor,metrics={'juggling_actor_input_projection':{**projection,'observation_timestamp':0}})
+    assert decide_juggling(stale,p).diagnostics['actor_prefix_source']=='smoothed_observed_velocity'
+
+
+def test_uncertain_far_future_target_does_not_command_large_detour():
+    ball=body('ball',.4,.5,track_id=1,vy=.2,vx=.15)
+    assert decide_juggling(scene(ball),{'prediction_horizon_seconds':2.5}).state.left_stick.x!=0 or decide_juggling(scene(ball),{'prediction_horizon_seconds':2.5}).state.right_stick.x!=0
+    decision=decide_juggling(scene(ball),{'prediction_horizon_seconds':2.5,'fallback_prediction_horizon_seconds':.95})
+    assert decision.state==ControllerState.neutral()
+
+
+def test_idle_actor_returns_middle_but_urgent_catch_keeps_priority():
+    left=body('player',.1,.85,track_id=100);right=body('partner',.9,.85,track_id=101)
+    p={'idle_centering':{'enabled':True}}
+    decision=decide_juggling(scene(left=left,right=right),p)
+    assert decision.state.left_stick.x>0 and decision.state.right_stick.x<0
+    ball=body('ball',.08,.65,track_id=1,vy=.5)
+    decision=decide_juggling(scene(ball,left=left,right=right),p)
+    assert decision.state.left_stick.x<0
+    assert decision.state.right_stick.x<0
+    assert decision.diagnostics['idle_middle_positions']=={'right':.75}
+
+
+def test_side_specific_center_tolerance_stops_minor_corrections_but_keeps_large_moves():
+    p={'deadband_left':.023,'deadband_right':.014}
+    a=decide_juggling(scene(body('ball',.27,.6,track_id=1,vy=.5)),p)
+    assert a.state.left_stick.x==0
+    b=decide_juggling(scene(body('ball',.29,.6,track_id=1,vy=.5)),p)
+    assert b.state.left_stick.x>0

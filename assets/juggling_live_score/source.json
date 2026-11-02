@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "label_method": "Actual JUGGLING result screenshots manually reviewed; unseen digits retain source-indexed MINING glyphs",
+  "templates": {
+    "0": {
+      "file": "0.png",
+      "sha256": "f55ca619d1ca9397f844cd3e1510c1f07f1b24042e1e36d45e04f2b1ae50e7a9",
+      "source": "baseline-02/round-0001",
+      "box_in_score_roi": [
+        12,
+        7,
+        16,
+        15
+      ]
+    },
+    "3": {
+      "file": "3.png",
+      "sha256": "3008495488af11b46694d6e38847e5faa290a627e3922f855a5fda2f91822719",
+      "source": "baseline-02/round-0001",
+      "box_in_score_roi": [
+        34,
+        7,
+        14,
+        15
+      ]
+    },
+    "4": {
+      "file": "4.png",
+      "sha256": "07c7ddd57fc359b777e16d5fafea6faccdee819b4aa1abf517b5f01da92ea3e9",
+      "source": "baseline-02/round-0001",
+      "box_in_score_roi": [
+        72,
+        7,
+        16,
+        15
+      ]
+    },
+    "5": {
+      "file": "5.png",
+      "sha256": "b7cac4e924fb2ac11b4b6a38307c20c50b74c82b2bbda7bf5377dabaf8031838",
+      "source": "baseline-02/round-0001",
+      "box_in_score_roi": [
+        92,
+        7,
+        16,
+        15
+      ]
+    },
+    "9": {
+      "file": "9.png",
+      "sha256": "5b1a0babf3bf86adf7b9a06e8aaed37d388cf7e237b2d4d24a7adff1516efe2b",
+      "source": "baseline-02/round-0002",
+      "box_in_score_roi": [
+        32,
+        7,
+        16,
+        15
+      ]
+    },
+    "2": {
+      "file": "2.png",
+      "sha256": "4ca3c2daafffe17da131cb767ec6c5ff15fe9eb34f5b34e5727ea5d430451ed1",
+      "source": "baseline-02/round-0002",
+      "box_in_score_roi": [
+        72,
+        7,
+        16,
+        15
+      ]
+    },
+    "1": {
+      "file": "1.png",
+      "sha256": "5e7f7fcc8da7ac8ccbf0236027e9e385817570085e8e119db4561c243bdbca79",
+      "source": "confirm-01/round-0001",
+      "box_in_score_roi": [
+        54,
+        7,
+        9,
+        15
+      ]
+    },
+    "6": {
+      "file": "6.png",
+      "sha256": "4f543ea83fd01805b2b492c324487091d3a6bfc450e1ef03a9e6cd7ba23dd2ae",
+      "source": "confirm-01/round-0002",
+      "box_in_score_roi": [
+        32,
+        7,
+        16,
+        15
+      ]
+    },
+    "8": {
+      "file": "8.png",
+      "sha256": "2d28766e720abbf20b4d3ccffa583d58afcd0204b418b511fd09e689227bee9c",
+      "source": "hot-validation-01/worker-0001/round-0001",
+      "box_in_score_roi": [
+        32,
+        7,
+        16,
+        15
+      ]
+    },
+    "7": {
+      "file": "7.png",
+      "sha256": "0f75099d3f64d7d00faf6de0dc4efe2efc0d8f60cb2298312438c953f34d3172",
+      "original_index": "artifacts/mining-score-reader/source.json",
+      "original_entry": {
+        "file": "digit-7.png",
+        "sha256": "0f75099d3f64d7d00faf6de0dc4efe2efc0d8f60cb2298312438c953f34d3172",
+        "source": "r2",
+        "digit_position_zero_based": 2,
+        "component_in_score_roi": [
+          52,
+          7,
+          16,
+          15
+        ]
+      }
+    }
+  },
+  "sources": {
+    "baseline-02/round-0001": {
+      "path": "artifacts/juggling-live/baseline-02/round-0001/result.png",
+      "sha256": "25e33d20e8264d6836f84887d7e68371c02d9c5f6346d228eda775951c1b6dc3",
+      "score_text": "03345",
+      "rank": "B",
+      "manually_verified": true
+    },
+    "baseline-02/round-0002": {
+      "path": "artifacts/juggling-live/baseline-02/round-0002/result.png",
+      "sha256": "58586904755e18812edbe8556433e2f9f3294ea3fb47eff59fcb6fb6b7469209",
+      "score_text": "09420",
+      "rank": "A",
+      "manually_verified": true
+    },
+    "confirm-01/round-0001": {
+      "path": "artifacts/juggling-live/confirm-01/round-0001/result.png",
+      "sha256": "b2984cc99895e128a3d64fda551fc716e185477c6de6f6230b57133911c63c43",
+      "score_text": "04125",
+      "rank": "B",
+      "manually_verified": true
+    },
+    "confirm-01/round-0002": {
+      "path": "artifacts/juggling-live/confirm-01/round-0002/result.png",
+      "sha256": "18d8109c91b1c86b9a7b647f3915bd2826886a573d45d6e3fd5239854fcddd55",
+      "score_text": "06660",
+      "rank": "B",
+      "manually_verified": true
+    },
+    "hot-validation-01/worker-0001/round-0001": {
+      "path": "artifacts/juggling-live/hot-validation-01/worker-0001/round-0001/result.png",
+      "sha256": "1ca7a387946c4f436ce9f428027e01b47d6afb82b3a1c5aaa118c31c09e5c0b5",
+      "score_text": "08280",
+      "rank": "A",
+      "manually_verified": true
+    }
+  }
+}

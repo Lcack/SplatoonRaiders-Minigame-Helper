@@ -2,12 +2,14 @@
   "version": 1,
   "game": "mining",
   "calibrated": false,
-  "viewport": [0, 0, 1, 1],
+  "advisory_only": true,
+  "vision_backend": "mining_live",
+  "viewport": [0.16666666666666666, 0.05092592592592592, 0.6666666666666666, 0.8888888888888888],
   "reference_size": [640, 480],
   "stable_frames": 3,
   "required": ["player", "corridor"],
   "detectors": [],
   "readouts": [],
-  "policy": {},
-  "notes": "未校准占位配置。需实测游戏区、道路、角色、石头、白色星星、强化状态及左上倒计时。"
+  "policy": {"algorithm": "reactive_supervised"},
+  "notes": "基于当前NS实机截图的MINING识别与监督避障原型。运动参数仍为待测假设，普通自动控制保持禁用；由助手监督接口验证后再决定校准范围。"
 }

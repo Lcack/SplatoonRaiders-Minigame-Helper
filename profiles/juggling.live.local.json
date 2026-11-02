@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "game": "juggling",
+  "calibrated": false,
+  "vision_backend": "arcade_fast",
+  "advisory_only": true,
+  "score_anchor": "../assets/arcade/score-anchor.png",
+  "viewport": [
+    0.1666666667,
+    0.0509259259,
+    0.6666666666,
+    0.8888888889
+  ],
+  "reference_size": [
+    640,
+    480
+  ],
+  "stable_frames": 1,
+  "required": [
+    "player",
+    "partner",
+    "ball"
+  ],
+  "detectors": [],
+  "readouts": [],
+  "policy": {
+    "algorithm": "reactive",
+    "calibrated": false,
+    "split_x": 0.5,
+    "latency_seconds": 0.05
+  },
+  "notes": "Actual NS experimental configuration; only visual live fixes enabled, not a complete physics calibration.",
+  "juggling_small_fish_supplement": true,
+  "read_live_lives": true,
+  "read_fever_gauge": true,
+  "track_ball_dynamics": true,
+  "ball_area_ratio_limit": 2.6,
+  "physical_ball_bounces": true,
+  "juggling_partner_full_half": true,
+  "score_assets": "../assets/juggling_live_score"
+}

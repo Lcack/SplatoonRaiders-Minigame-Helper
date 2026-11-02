@@ -18,8 +18,21 @@ from .vision import crop_roi
 class FastArcadeRecognizer:
     def __init__(self, game, profile):
         self.game, self.profile = Game(game), profile
-        self.tracker = PredictiveTracker()
+        area_gate=profile.get('ball_area_ratio_limit') if self.game==Game.JUGGLING else None
+        physical_bounces=self.game==Game.JUGGLING and profile.get('physical_ball_bounces') is True
+        self.tracker = PredictiveTracker(ball_area_ratio_limit=area_gate,physical_ball_bounces=physical_bounces)
         self.phase_count = 0
+        self._life_candidate = None
+        self._life_repeats = 0
+        self._life_first = None
+        self.fever_observer = None
+        self.ball_observer = None
+        if self.game==Game.JUGGLING and profile.get('track_ball_dynamics') is True:
+            from .juggling_prediction import BallTrajectoryObserver
+            self.ball_observer=BallTrajectoryObserver()
+        if self.game==Game.JUGGLING and profile.get('read_fever_gauge') is True:
+            from .juggling_fever import FeverObserver
+            self.fever_observer=FeverObserver()
         self.stable_frames = profile.get("stable_frames", 2)
         if isinstance(self.stable_frames, bool) or not isinstance(self.stable_frames, int) or self.stable_frames < 1:
             raise ValueError("stable_frames 必须为正整数")
@@ -104,6 +117,27 @@ class FastArcadeRecognizer:
                 best=(score,(x0+location[0],y0+location[1],tw,th,tw*th))
         return best
 
+    @staticmethod
+    def juggling_life_pixels(hsv):
+        """Five fixed HUD slots observed on the actual NS, not a life rule."""
+        red=(((hsv[:,:,0]<=9)|(hsv[:,:,0]>=171))&(hsv[:,:,1]>=140)&(hsv[:,:,2]>=90))
+        return [int(np.count_nonzero(red[8:27,250+20*i:270+20*i])) for i in range(5)]
+
+    def juggling_lives(self,hsv,anchor_score):
+        pixels=self.juggling_life_pixels(hsv)
+        occupied=[count>=100 for count in pixels]
+        count=sum(occupied)
+        valid=anchor_score>=.65 and occupied==([True]*count+[False]*(5-count))
+        candidate=count if valid else None
+        self._life_repeats=self._life_repeats+1 if candidate==self._life_candidate else 1
+        self._life_candidate=candidate
+        result={'life_slot_red_pixels':pixels,'lives_observed':False,
+                'life_count_source':'actual_red_heart_HUD_slots','life_confidence_kind':'heuristic_gate_not_probability'}
+        if candidate is not None and self._life_repeats>=(8 if candidate==0 else 3):
+            if self._life_first is None and candidate>0:self._life_first=candidate
+            result.update(lives_remaining=candidate,lives_observed=True,lives_first_observed=self._life_first)
+        return result
+
     def observe(self, packet):
         started = time.perf_counter()
         area = cv2.resize(crop_roi(packet.frame, self.profile.get("viewport", [1/6, 55/1080, 2/3, 960/1080])), (640, 480))
@@ -123,6 +157,7 @@ class FastArcadeRecognizer:
         body_boxes = self.components(green_blue, 100, (5, 5))
         yellow_boxes = self.components(yellow, 80, (5, 5))
         found = []
+        partner_post_supplement=[]
         squid_count=0
         ambiguous=False
         robots = [b for b in blue_boxes if b[2] >= (12 if self.game == Game.LANDING else 22) and b[3] >= 12 and b[4] >= (100 if self.game == Game.LANDING else 200)
@@ -155,10 +190,23 @@ class FastArcadeRecognizer:
                       and 0.14*640 < b[0]+b[2]/2 < 0.86*640 and b[4] >= 130
                       and (not player or not self.overlap(b, player, 2))]
             if self.game == Game.JUGGLING:
-                faces = [b for b in blue_boxes if b[0] > 330 and b[1] > 385 and b[4] >= 25 and b[2] >= 7 and b[3] >= 8]
-                squids = [b for b in body_boxes if b[0] > 330 and b[1] > 380 and 12 <= b[2] <= 50
+                partner_left=310 if self.profile.get('juggling_partner_full_half') is True else 330
+                faces = [b for b in blue_boxes if b[0] > partner_left and b[0]+b[2]/2>320 and b[1] > 385 and b[4] >= 25 and b[2] >= 7 and b[3] >= 8]
+                squids = [b for b in body_boxes if b[0] > partner_left and b[0]+b[2]/2>320 and b[1] > 380 and 12 <= b[2] <= 50
                           and 17 <= b[3] <= 65 and any(b[0] <= f[0]+f[2]/2 <= b[0]+b[2]
                           and b[1] <= f[1]+f[3]/2 <= b[1]+b[3] for f in faces)]
+                if not squids and self.profile.get('juggling_partner_full_half') is True:
+                    near=[f for f in faces if f[0]<375 and f[1]>400]
+                    if near:
+                        # The green CRT fringe of the middle post can join
+                        # the squid body. Limit it by the current blue face,
+                        # rather than publishing the post as part of actor.
+                        x0=max(310,min(f[0] for f in near)-24);x1=min(400,max(f[0]+f[2] for f in near)+8)
+                        y0=max(402,min(f[1] for f in near)-8);y1=min(465,max(f[1]+f[3] for f in near)+5)
+                        local=np.zeros_like(green_blue);local[y0:y1,x0:x1]=green_blue[y0:y1,x0:x1]
+                        squids=[b for b in self.components(local,130,(3,3)) if b[0]+b[2]/2>320
+                                and 12<=b[2]<=50 and 17<=b[3]<=55]
+                        partner_post_supplement=[list(b[:4]) for b in squids]
             if powered:
                 squids += [b for b in yellow_boxes if 18 <= b[2] <= 55 and 32 <= b[3] <= 80
                            and b[2]/b[3] < 1.15 and not self.overlap(b, player, 3)]
@@ -180,10 +228,27 @@ class FastArcadeRecognizer:
                 red[:, :85] = 0
                 red[:, 555:] = 0
             fish = []
+            supplemented=[]
             for box in self.components(bright, 50, (3, 17)):
                 x, y, w, h, pixels = box
                 red_count = cv2.countNonZero(red[y:y+h, x:x+w])
-                if 12 <= w < 145 and 18 <= h < 125 and 0.25 < w/h < 3.1 and red_count >= 65 and red_count/(w*h) >= 0.05:
+                ordinary=12 <= w < 145 and 18 <= h < 125 and 0.25 < w/h < 3.1 and red_count >= 65 and red_count/(w*h) >= 0.05
+                supplement=False
+                if (not ordinary and self.game==Game.JUGGLING
+                        and self.profile.get('juggling_small_fish_supplement') is True
+                        and 12<=w<145 and 8<=h<125 and .25<w/h<8
+                        and red_count>=20 and red_count/(w*h)>=.03):
+                    # Actual rotating platform fish can have <65 red pixels
+                    # or be thinner than18 px. Require an observed coloured
+                    # body as well: red falling hearts and green +30 text
+                    # cannot qualify alone. No stale track creates an object.
+                    body_count=cv2.countNonZero(green_blue[y:y+h,x:x+w])
+                    tile=hsv[y:y+h,x:x+w]
+                    pale_count=int(np.count_nonzero((tile[:,:,1]<=100)&(tile[:,:,2]>=150)))
+                    supplement=body_count>=10 and pale_count>=12
+                    if supplement:supplemented.append({'box':list(box[:4]),'red_pixels':red_count,
+                        'body_pixels':body_count,'pale_face_pixels':pale_count})
+                if ordinary or supplement:
                     fish.append(box)
                     found.append(self.entity("ball" if self.game == Game.JUGGLING else "enemy", box, 0.84, pad=2))
             if self.game == Game.HOPPING:
@@ -242,9 +307,21 @@ class FastArcadeRecognizer:
         phase = "overlay" if overlay else ("playing" if self.phase_count >= self.stable_frames else "unknown")
         confidence = 0.82 if phase == "playing" else 0.0
         metrics["hud_anchor_score"] = anchor_score
+        if self.game==Game.JUGGLING:
+            metrics['small_fish_supplement_enabled']=self.profile.get('juggling_small_fish_supplement') is True
+            metrics['small_fish_supplement']=supplemented
+            metrics['ball_velocity_windows']=dict(self.tracker.velocity_windows)
+            metrics['partner_post_supplement']=partner_post_supplement
+            if self.profile.get('read_live_lives') is True:metrics.update(self.juggling_lives(hsv,anchor_score))
         metrics["squid_candidates"] = squid_count
         metrics["robot_candidates"] = len(robots)
         metrics["ambiguous_targets"] = ambiguous
+        if self.fever_observer is not None:
+            pickups,fever=self.fever_observer.observe(hsv,tracked,packet.timestamp,phase)
+            tracked=tuple(tracked)+pickups
+            metrics.update(fever)
+        if self.ball_observer is not None:
+            metrics['ball_flight_models']=self.ball_observer.observe(tracked,packet.timestamp,phase)
         metrics["vision_ms"] = (time.perf_counter()-started)*1000
         notes = ("参考视频颜色/形状启发式；匹配得分不是正确率；重叠与陌生画面可能误检",)
         if ambiguous:

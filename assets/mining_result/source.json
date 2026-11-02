@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "canonical_size": [
+    640,
+    480
+  ],
+  "sources": {
+    "menu": {
+      "file": "artifacts\\menu-live-verification\\menu-mining.png",
+      "sha256": "639c50d3199be4a9fd82af0e34636d93606307091c5895e7043d10f1558b1f5b",
+      "source_size": [
+        1080,
+        1920,
+        3
+      ],
+      "canonical_source_crop_xywh": [
+        320,
+        55,
+        1280,
+        960
+      ]
+    },
+    "C": {
+      "file": "artifacts\\mining-supervision\\round-08-adaptive\\last-frame.png",
+      "sha256": "3f46b9f0caa6ca8c0a0a761a73fbde7f4b8d0878b738506df43bb258751e6e67",
+      "source_size": [
+        1080,
+        1920,
+        3
+      ],
+      "canonical_source_crop_xywh": [
+        320,
+        55,
+        1280,
+        960
+      ]
+    },
+    "S": {
+      "file": "artifacts\\mining-result-reader\\source-S-frame-009360.png",
+      "sha256": "4d54866325d3c47a1a83f8c7b13738f7377699b6f6e87755d7ed0daece652d7e",
+      "source_size": [
+        480,
+        852,
+        3
+      ],
+      "canonical_source_crop_xywh": [
+        142,
+        26,
+        568,
+        428
+      ],
+      "video_file": "【斯普拉遁涂击队】小游戏全S通关视角 - 1.【斯普拉遁涂击队】小游戏全S通关视角(Av117006586158341,P1).mp4",
+      "video_sha256": "d05ab6d8b3a162f770778966a8fee7cc778662b6e65384e3070bdc61194c8b9f",
+      "frame_index": 9360,
+      "fps": 30,
+      "seconds": 312
+    }
+  },
+  "records": [
+    {
+      "path": "rank-A.png",
+      "sha256": "25265317b41c93a9e4611e1468473172971b821f0c0b9e4eb94b61ca7c0d8764",
+      "label": "A",
+      "source_id": "menu",
+      "canonical_roi_xywh": [
+        516,
+        257,
+        30,
+        23
+      ],
+      "kind": "menu_glyph_only_not_actual_result"
+    },
+    {
+      "path": "glyph-A-source.png",
+      "sha256": "72ccc319965d73ae99c64b7a182f0795e30ab484aba2a9dd79e848304ae9c98f",
+      "label": "A",
+      "source_id": "menu",
+      "canonical_roi_xywh": [
+        516,
+        257,
+        30,
+        23
+      ],
+      "kind": "source_glyph_crop"
+    },
+    {
+      "path": "rank-B.png",
+      "sha256": "36b7af1a64b2c9acd06b2962ca96aff5af1e1a109bad42202789660f42bb14aa",
+      "label": "B",
+      "source_id": "menu",
+      "canonical_roi_xywh": [
+        516,
+        167,
+        30,
+        23
+      ],
+      "kind": "menu_glyph_only_not_actual_result"
+    },
+    {
+      "path": "glyph-B-source.png",
+      "sha256": "7c86f40b8219f5f959ac3f1c9c41850f610bcc903c646e2527d6f6aede1f1373",
+      "label": "B",
+      "source_id": "menu",
+      "canonical_roi_xywh": [
+        516,
+        167,
+        30,
+        23
+      ],
+      "kind": "source_glyph_crop"
+    },
+    {
+      "path": "rank-C.png",
+      "sha256": "b76c5124ea8f51d18169f1c8fa799a88846194119c1d7b4da74f326930c4b468",
+      "label": "C",
+      "source_id": "C",
+      "canonical_roi_xywh": [
+        340,
+        208,
+        35,
+        24
+      ],
+      "kind": "actual_result_glyph"
+    },
+    {
+      "path": "glyph-C-source.png",
+      "sha256": "1bc685ded2ff5bb928f53fb79deaea5679403ca346d6a65b1dc7cc27622ec833",
+      "label": "C",
+      "source_id": "C",
+      "canonical_roi_xywh": [
+        340,
+        208,
+        35,
+        24
+      ],
+      "kind": "source_glyph_crop"
+    },
+    {
+      "path": "rank-S.png",
+      "sha256": "f90b81c819020c327c924110303ff8a41eaed5bee7a68e9178586a3c0d45a6ce",
+      "label": "S",
+      "source_id": "S",
+      "canonical_roi_xywh": [
+        340,
+        204,
+        35,
+        28
+      ],
+      "kind": "actual_result_glyph"
+    },
+    {
+      "path": "glyph-S-source.png",
+      "sha256": "7b6c61b009ce2a553ce1ff7cd90601a541fec33c5f8a9fcbc716e6b30a72497b",
+      "label": "S",
+      "source_id": "S",
+      "canonical_roi_xywh": [
+        340,
+        204,
+        35,
+        28
+      ],
+      "kind": "source_glyph_crop"
+    },
+    {
+      "path": "anchor-rank.png",
+      "sha256": "dc34f9c3608b60f0ab5592b495293b3dd74d21d97ce61602ca9da1f320a379ba",
+      "source_id": "C",
+      "canonical_roi_xywh": [
+        192,
+        209,
+        90,
+        24
+      ],
+      "kind": "result_anchor"
+    },
+    {
+      "path": "anchor-score.png",
+      "sha256": "98b72d36678e6809331788e8eae533249bed196b4ea3ac3825f67be1f0d076b8",
+      "source_id": "C",
+      "canonical_roi_xywh": [
+        192,
+        174,
+        112,
+        25
+      ],
+      "kind": "result_anchor"
+    },
+    {
+      "path": "anchor-retry.png",
+      "sha256": "4545d8020d357f75d030c4901bb17d2641baa0f73e74808cc1728e59f09a95ff",
+      "source_id": "C",
+      "canonical_roi_xywh": [
+        262,
+        251,
+        122,
+        30
+      ],
+      "kind": "result_anchor"
+    },
+    {
+      "path": "anchor-quit.png",
+      "sha256": "dc9f5547b16ea7f4c4aadd9f14725c167cdb1189f7715e71afe8783e5ae4a3a2",
+      "source_id": "C",
+      "canonical_roi_xywh": [
+        262,
+        286,
+        100,
+        30
+      ],
+      "kind": "result_anchor"
+    },
+    {
+      "path": "fixture-menu.png",
+      "sha256": "60c9777e2ca1d1b32bc0682ec418940ad631800bd76e635805b6e08222205432",
+      "source_id": "menu",
+      "kind": "actual_source_canonical_fixture"
+    },
+    {
+      "path": "fixture-C.png",
+      "sha256": "461b8654ae5e5599c44294d28fc020f889c2ac715147eda6d1f7aa993291e171",
+      "source_id": "C",
+      "kind": "actual_source_canonical_fixture"
+    },
+    {
+      "path": "fixture-S.png",
+      "sha256": "a12e3b6f623c1d6bc3d5b177d16689c15a5472c0b717b2bdd6e9c61d66096696",
+      "source_id": "S",
+      "kind": "actual_source_canonical_fixture"
+    },
+    {
+      "path": "synthetic-A-on-C.png",
+      "sha256": "bc297036646e808bb627b042dbbdc862658798896cf81143de64d19e144435ce",
+      "source_id": [
+        "C",
+        "menu"
+      ],
+      "kind": "synthetic_glyph_pipeline_not_actual_result",
+      "note": "Only the result rank field is replaced with observed menu A; footer explicitly labels synthetic."
+    },
+    {
+      "path": "synthetic-B-on-C.png",
+      "sha256": "cb8c35745952b8ebc7b73e09449426b1ff6fae0cf06020eb5b654381c094b8c0",
+      "source_id": [
+        "C",
+        "menu"
+      ],
+      "kind": "synthetic_glyph_pipeline_not_actual_result",
+      "note": "Only the result rank field is replaced with observed menu B; footer explicitly labels synthetic."
+    }
+  ],
+  "glyph_processing": {
+    "ink_threshold": "gray > max(25, .42*local_peak); reject local_peak<70",
+    "normalization": "tight glyph bounds, preserve aspect in 24x24, center on black32x32 canvas; cv2.INTER_AREA"
+  },
+  "label_scope": "A/B are menu glyphs, C/S actual results. Synthetic A/B results prove only the shape/context pipeline. No numeric score OCR or rank thresholds are implemented."
+}
